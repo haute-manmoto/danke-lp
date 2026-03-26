@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>笑門酒房 だんけ | Danke Izakaya - Lava Stone Yakitori, Osaka</title>
+<meta name="description" content="Hidden gem izakaya in Osaka's Tenjinbashi. Lava stone grilled yakitori, 18 intimate seats. A neighborhood spot where fire, stone, and soul come together.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ========================================
+   CSS CUSTOM PROPERTIES
+   ======================================== */
+:root {
+  --amber: #D4A574;
+  --brown: #8B5E3C;
+  --dark: #2A1F1A;
+  --light: #FAF5EF;
+  --lava: #E8734A;
+  --lava-glow: #E8734A33;
+
+  --font-heading: 'Noto Serif JP', serif;
+  --font-body-jp: 'Noto Sans JP', sans-serif;
+  --font-body: 'Inter', var(--font-body-jp), sans-serif;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-reveal: 0.9s var(--ease-out);
+}
+
+/* ========================================
+   RESET & BASE
+   ======================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; }
+
+/* ========================================
+   WASHI PAPER NOISE TEXTURE OVERLAY
+   ======================================== */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 1rem;
+}
+
+/* ========================================
+   LANGUAGE SWITCHER
+   ======================================== */
+.lang-switcher {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  padding: 0.75rem 1rem;
+  background: rgba(42, 31, 26, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212, 165, 116, 0.15);
+}
+
+.lang-btn {
+  padding: 0.4rem 1.2rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(250, 245, 239, 0.55);
+  letter-spacing: 0.08em;
+  transition: color 0.3s, background 0.3s;
+  border-radius: 2px;
+  position: relative;
+}
+
+.lang-btn:hover { color: var(--light); }
+.lang-btn.active {
+  color: var(--light);
+  background: rgba(212, 165, 116, 0.2);
+}
+
+.lang-btn + .lang-btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 25%;
+  height: 50%;
+  width: 1px;
+  background: rgba(250, 245, 239, 0.15);
+}
+
+/* hide non-active languages */
+[data-lang] { display: none; }
+[data-lang="en"] { display: block; }
+body[data-active-lang="zh"] [data-lang="zh"] { display: block; }
+body[data-active-lang="zh"] [data-lang="en"] { display: none; }
+body[data-active-lang="ko"] [data-lang="ko"] { display: block; }
+body[data-active-lang="ko"] [data-lang="en"] { display: none; }
+
+/* inline elements */
+span[data-lang], a[data-lang] { display: none; }
+span[data-lang="en"], a[data-lang="en"] { display: inline; }
+body[data-active-lang="zh"] span[data-lang="zh"],
+body[data-active-lang="zh"] a[data-lang="zh"] { display: inline; }
+body[data-active-lang="zh"] span[data-lang="en"],
+body[data-active-lang="zh"] a[data-lang="en"] { display: none; }
+body[data-active-lang="ko"] span[data-lang="ko"],
+body[data-active-lang="ko"] a[data-lang="ko"] { display: inline; }
+body[data-active-lang="ko"] span[data-lang="en"],
+body[data-active-lang="ko"] a[data-lang="en"] { display: none; }
+
+/* ========================================
+   REVEAL ANIMATIONS
+   ======================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity var(--transition-reveal), transform var(--transition-reveal);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .steam-particle { animation: none !important; }
+  .ember { animation: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* ========================================
+   SECTION: HERO
+   ======================================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 1.5rem 4rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(175deg, var(--dark) 0%, #3D2B1E 35%, #5A3D2B 60%, var(--brown) 100%);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 70%, rgba(232, 115, 74, 0.12) 0%, transparent 70%),
+              radial-gradient(ellipse 80% 40% at 50% 90%, rgba(212, 165, 116, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero-noren {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  opacity: 0.2;
+}
+
+.hero-noren-bar {
+  width: 100%;
+  height: 3px;
+  background: var(--amber);
+  border-radius: 2px;
+}
+
+.hero-noren-panel {
+  width: 28px;
+  height: 60px;
+  background: linear-gradient(180deg, var(--amber) 0%, rgba(212, 165, 116, 0) 100%);
+  border-radius: 0 0 14px 14px;
+  display: inline-block;
+  margin: 2px 8px 0;
+}
+
+.hero-shop-name {
+  font-family: var(--font-heading);
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  color: var(--amber);
+  letter-spacing: 0.25em;
+  margin-bottom: 1.5rem;
+  opacity: 0.7;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  color: var(--light);
+  margin-bottom: 1.25rem;
+  max-width: 700px;
+}
+
+.hero-sub {
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+  color: var(--amber);
+  max-width: 500px;
+  margin-bottom: 0.75rem;
+  line-height: 1.8;
+}
+
+.hero-tagline {
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+  color: rgba(250, 245, 239, 0.5);
+  max-width: 480px;
+  line-height: 1.8;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(250, 245, 239, 0.3);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+}
+
+.hero-scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, rgba(212, 165, 116, 0.4), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(1); }
+  50% { opacity: 0.8; transform: scaleY(1.2); }
+}
+
+/* steam particles */
+.steam-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.steam-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(250, 245, 239, 0.15);
+  border-radius: 50%;
+  animation: steamRise linear infinite;
+}
+
+@keyframes steamRise {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0;
+  }
+  10% { opacity: 0.6; }
+  50% { opacity: 0.3; }
+  100% {
+    transform: translateY(-100vh) translateX(30px) scale(3);
+    opacity: 0;
+  }
+}
+
+/* ember dots */
+.ember {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--lava);
+  animation: emberFloat linear infinite;
+  filter: blur(0.5px);
+}
+
+@keyframes emberFloat {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  20% { opacity: 0.8; }
+  80% { opacity: 0.2; }
+  100% {
+    transform: translateY(-60vh) translateX(-20px);
+    opacity: 0;
+  }
+}
+
+/* ========================================
+   SVG WAVE DIVIDERS
+   ======================================== */
+.wave-divider {
+  width: 100%;
+  display: block;
+  margin: -1px 0;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========================================
+   SECTION: STORY
+   ======================================== */
+.story {
+  padding: 5rem 1.5rem;
+  background: var(--light);
+  position: relative;
+}
+
+.story-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.story h2 {
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  color: var(--dark);
+  margin-bottom: 2rem;
+}
+
+.story-text {
+  font-size: 1rem;
+  color: #5a4a3e;
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+
+/* Lava stone texture block */
+.lava-block {
+  position: relative;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  margin: 2.5rem 0;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 30% 40% at 20% 30%, rgba(232, 115, 74, 0.15), transparent),
+    radial-gradient(ellipse 25% 35% at 70% 60%, rgba(212, 165, 116, 0.12), transparent),
+    radial-gradient(ellipse 40% 30% at 50% 80%, rgba(232, 115, 74, 0.08), transparent),
+    linear-gradient(135deg, #3D2B1E 0%, var(--dark) 50%, #3D2B1E 100%);
+  color: var(--light);
+}
+
+.lava-block::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle 4px at 15% 25%, rgba(232, 115, 74, 0.25), transparent 8px),
+    radial-gradient(circle 3px at 45% 15%, rgba(212, 165, 116, 0.2), transparent 6px),
+    radial-gradient(circle 5px at 75% 45%, rgba(232, 115, 74, 0.15), transparent 10px),
+    radial-gradient(circle 3px at 30% 70%, rgba(212, 165, 116, 0.18), transparent 6px),
+    radial-gradient(circle 4px at 85% 80%, rgba(232, 115, 74, 0.2), transparent 8px),
+    radial-gradient(circle 2px at 55% 55%, rgba(250, 245, 239, 0.1), transparent 4px);
+  pointer-events: none;
+}
+
+.lava-block h3 {
+  font-size: 1.15rem;
+  color: var(--amber);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.lava-block p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  position: relative;
+  color: rgba(250, 245, 239, 0.85);
+}
+
+/* Flame SVG decoration */
+.flame-deco {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  opacity: 0.15;
+}
+
+/* ========================================
+   SECTION: EXPERIENCE
+   ======================================== */
+.experience {
+  padding: 5rem 1.5rem;
+  background: linear-gradient(180deg, #3D2B1E 0%, var(--dark) 100%);
+  color: var(--light);
+  position: relative;
+}
+
+.experience-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.experience h2 {
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.experience-sub {
+  color: var(--amber);
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .experience-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.exp-card {
+  background: rgba(250, 245, 239, 0.04);
+  border: 1px solid rgba(212, 165, 116, 0.1);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.4s, background 0.4s;
+}
+
+.exp-card:hover {
+  border-color: rgba(212, 165, 116, 0.25);
+  background: rgba(250, 245, 239, 0.06);
+}
+
+.exp-card-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  color: var(--amber);
+}
+
+.exp-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--light);
+}
+
+.exp-card p {
+  font-size: 0.9rem;
+  color: rgba(250, 245, 239, 0.6);
+  line-height: 1.8;
+}
+
+/* ambient glow */
+.experience::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(ellipse, rgba(232, 115, 74, 0.06), transparent 70%);
+  pointer-events: none;
+}
+
+/* ========================================
+   SECTION: INFO
+   ======================================== */
+.info {
+  padding: 5rem 1.5rem;
+  background: var(--light);
+}
+
+.info-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.info h2 {
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 700px) {
+  .info-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.info-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--brown);
+  margin-top: 2px;
+}
+
+.info-item h4 {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brown);
+  margin-bottom: 0.25rem;
+}
+
+.info-item p {
+  font-size: 0.95rem;
+  color: #5a4a3e;
+  line-height: 1.7;
+}
+
+/* Card accepted badge */
+.cash-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #F0EBE3;
+  border: 1.5px solid var(--amber);
+  color: var(--brown);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+
+.cash-badge svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Map container */
+.info-map {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(139, 94, 60, 0.15);
+  min-height: 300px;
+}
+
+.info-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border: 0;
+}
+
+/* ========================================
+   SECTION: CTA
+   ======================================== */
+.cta {
+  padding: 6rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(180deg, var(--dark) 0%, #1A1210 100%);
+  color: var(--light);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 200px;
+  background: radial-gradient(ellipse, rgba(232, 115, 74, 0.08), transparent 70%);
+  pointer-events: none;
+}
+
+.cta h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.cta-sub {
+  color: rgba(250, 245, 239, 0.5);
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--lava);
+  color: var(--light);
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 24px rgba(232, 115, 74, 0.25);
+}
+
+.cta-btn:hover {
+  background: #d4633c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(232, 115, 74, 0.35);
+}
+
+.cta-btn:active { transform: translateY(0); }
+
+.cta-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+  padding: 2rem 1.5rem;
+  background: #1A1210;
+  text-align: center;
+  color: rgba(250, 245, 239, 0.25);
+  font-size: 0.8rem;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (min-width: 768px) {
+  .story { padding: 6rem 2rem; }
+  .experience { padding: 6rem 2rem; }
+  .info { padding: 6rem 2rem; }
+  .lava-block { padding: 3rem 2.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .story { padding: 8rem 2rem; }
+  .experience { padding: 8rem 2rem; }
+  .info { padding: 8rem 2rem; }
+  .cta { padding: 8rem 2rem; }
+}
+</style>
+</head>
+
+<body data-active-lang="en">
+
+<!-- ===================== LANGUAGE SWITCHER ===================== -->
+<nav class="lang-switcher" role="navigation" aria-label="Language">
+  <button class="lang-btn active" data-switch-lang="en" aria-label="English">EN</button>
+  <button class="lang-btn" data-switch-lang="zh" aria-label="Chinese">中文</button>
+  <button class="lang-btn" data-switch-lang="ko" aria-label="Korean">한국어</button>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <!-- Steam / ember particles (injected by JS) -->
+  <div class="steam-container" aria-hidden="true" id="steam-container"></div>
+
+  <!-- Noren curtain metaphor -->
+  <div class="hero-noren" aria-hidden="true">
+    <div class="hero-noren-bar"></div>
+    <div style="text-align:center;">
+      <div class="hero-noren-panel"></div>
+      <div class="hero-noren-panel"></div>
+    </div>
+  </div>
+
+  <p class="hero-shop-name reveal">笑門酒房 だんけ</p>
+
+  <h1 class="reveal" style="transition-delay:0.15s">
+    <span data-lang="en">Welcome to Our Little Kitchen</span>
+    <span data-lang="zh">欢迎来到我们的小厨房</span>
+    <span data-lang="ko">우리의 작은 주방에 오신 것을 환영합니다</span>
+  </h1>
+
+  <p class="hero-sub reveal" style="transition-delay:0.3s">
+    <span data-lang="en">Lava stone grilled yakitori in a hidden Osaka alley</span>
+    <span data-lang="zh">大阪隐秘小巷中的熔岩石烤鸡肉串</span>
+    <span data-lang="ko">오사카 숨겨진 골목의 용암석 구이 야키토리</span>
+  </p>
+
+  <p class="hero-tagline reveal" style="transition-delay:0.45s">
+    <span data-lang="en">A neighborhood izakaya where fire, stone, and soul come together</span>
+    <span data-lang="zh">一家将火、石与灵魂融为一体的社区居酒屋</span>
+    <span data-lang="ko">불, 돌, 그리고 정성이 하나 되는 동네 이자카야</span>
+  </p>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- Wave divider: dark to light -->
+<div class="wave-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" fill="none">
+    <path d="M0,0 L0,60 Q180,100 360,70 Q540,40 720,65 Q900,90 1080,55 Q1260,20 1440,50 L1440,0 Z" fill="#8B5E3C"/>
+    <path d="M0,20 Q180,80 360,50 Q540,20 720,45 Q900,70 1080,35 Q1260,0 1440,30 L1440,100 L0,100 Z" fill="#FAF5EF"/>
+  </svg>
+</div>
+
+<!-- ===================== STORY ===================== -->
+<section class="story" id="story">
+  <div class="story-inner">
+    <p class="section-label reveal">
+      <span data-lang="en">Our Secret</span>
+      <span data-lang="zh">我们的秘密</span>
+      <span data-lang="ko">비밀</span>
+    </p>
+
+    <h2 class="reveal">
+      <span data-lang="en">Forged on Lava Stone</span>
+      <span data-lang="zh">熔岩石上的匠心</span>
+      <span data-lang="ko">용암석 위의 장인 정신</span>
+    </h2>
+
+    <!-- EN -->
+    <div data-lang="en">
+      <p class="story-text reveal">
+        Deep beneath volcanic mountains, stone is born from fire. We bring that ancient heat to every skewer. Our lava stone grills retain heat with remarkable evenness, creating yakitori that is impossibly crispy on the outside and perfectly juicy within. The porous surface of the stone imparts a subtle mineral character you won't find anywhere else.
+      </p>
+    </div>
+    <!-- ZH -->
+    <div data-lang="zh">
+      <p class="story-text reveal">
+        在火山深处，石头从烈焰中诞生。我们将这份远古的热量注入每一串料理。天然火山石均匀蓄热，烤出外酥里嫩的极致口感，多孔的石头表面还赋予食物微妙的矿物质风味，这是在其他地方品尝不到的独特滋味。
+      </p>
+    </div>
+    <!-- KO -->
+    <div data-lang="ko">
+      <p class="story-text reveal">
+        화산 깊은 곳에서 돌은 불로부터 태어납니다. 우리는 그 태고의 열기를 모든 꼬치에 담아냅니다. 천연 화산석이 균일하게 열을 머금어, 겉은 바삭하고 속은 촉촉한 최고의 야키토리를 만들어냅니다. 다공성 석재 표면이 선사하는 은은한 미네랄 풍미는 다른 곳에서는 맛볼 수 없는 특별함입니다.
+      </p>
+    </div>
+
+    <!-- Lava block highlight -->
+    <div class="lava-block reveal">
+      <svg class="flame-deco" width="60" height="80" viewBox="0 0 60 80" aria-hidden="true">
+        <path d="M30,0 Q35,20 25,35 Q15,50 30,65 Q20,50 25,40 Q30,30 28,15 Z" fill="#E8734A" opacity="0.4"/>
+        <path d="M22,10 Q28,25 20,38 Q12,50 22,60 Q15,48 18,38 Q22,28 20,18 Z" fill="#D4A574" opacity="0.3"/>
+        <path d="M38,15 Q42,30 35,42 Q28,55 38,68 Q30,54 33,42 Q38,32 36,22 Z" fill="#E8734A" opacity="0.3"/>
+      </svg>
+
+      <h3>
+        <span data-lang="en">And then... lava stone pizza?</span>
+        <span data-lang="zh">还有......熔岩石烤披萨？</span>
+        <span data-lang="ko">그리고... 용암석 구이 피자?</span>
+      </h3>
+      <p>
+        <span data-lang="en">Yes. Our lava stone doesn't just grill skewers. We bake thin-crust pizza on it too. The stone's radiant heat gives the dough a wood-fired crispness with a soft, pillowy center. It's the surprise that keeps regulars coming back.</span>
+        <span data-lang="zh">没错。我们的熔岩石不只是烤串。我们还在上面烤制薄底披萨。石头的辐射热赋予面团柴火般的酥脆外皮和柔软蓬松的内心。这个惊喜让常客们一来再来。</span>
+        <span data-lang="ko">네, 맞습니다. 우리의 용암석은 꼬치만 굽지 않습니다. 씬크러스트 피자도 구워냅니다. 돌의 복사열이 반죽에 장작불 같은 바삭함과 부드럽고 폭신한 속을 선사합니다. 단골들이 계속 찾아오는 이유입니다.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Wave divider: light to dark -->
+<div class="wave-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" fill="none">
+    <path d="M0,0 L0,50 Q240,90 480,60 Q720,30 960,55 Q1200,80 1440,40 L1440,0 Z" fill="#FAF5EF"/>
+    <path d="M0,40 Q240,75 480,45 Q720,15 960,40 Q1200,65 1440,25 L1440,100 L0,100 Z" fill="#3D2B1E"/>
+  </svg>
+</div>
+
+<!-- ===================== EXPERIENCE ===================== -->
+<section class="experience" id="experience">
+  <div class="experience-inner">
+    <p class="section-label reveal" style="text-align:center;">
+      <span data-lang="en">The Space</span>
+      <span data-lang="zh">空间</span>
+      <span data-lang="ko">공간</span>
+    </p>
+
+    <h2 class="reveal">
+      <span data-lang="en">Just 18 Seats. All Heart.</span>
+      <span data-lang="zh">仅18个座位，满满的用心</span>
+      <span data-lang="ko">단 18석, 가득한 정성</span>
+    </h2>
+
+    <p class="experience-sub reveal">
+      <span data-lang="en">A genuine local experience, just for you</span>
+      <span data-lang="zh">只为你准备的正宗日式体验</span>
+      <span data-lang="ko">당신만을 위한 진정한 로컬 체험</span>
+    </p>
+
+    <div class="experience-grid">
+      <!-- Card 1: Counter -->
+      <div class="exp-card reveal">
+        <svg class="exp-card-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="4" y="28" width="40" height="4" rx="2" fill="currentColor" opacity="0.3"/>
+          <circle cx="14" cy="22" r="3" stroke="currentColor" stroke-width="2" fill="none"/>
+          <circle cx="24" cy="22" r="3" stroke="currentColor" stroke-width="2" fill="none"/>
+          <circle cx="34" cy="22" r="3" stroke="currentColor" stroke-width="2" fill="none"/>
+          <path d="M8,36 L8,32 L40,32 L40,36" stroke="currentColor" stroke-width="2" fill="none"/>
+        </svg>
+        <h3>
+          <span data-lang="en">Counter Seats</span>
+          <span data-lang="zh">吧台座位</span>
+          <span data-lang="ko">카운터석</span>
+        </h3>
+        <p>
+          <span data-lang="en">Sit right at the counter and watch the chef work the lava stone grill. Every sizzle, every flip. The best seat in the house for solo travelers.</span>
+          <span data-lang="zh">坐在吧台前，近距离观看师傅在熔岩石上施展手艺。每一声滋滋作响，每一次翻转。独自旅行者的最佳座位。</span>
+          <span data-lang="ko">카운터에 앉아 장인이 용암석 그릴 위에서 일하는 모습을 가까이 볼 수 있습니다. 모든 지글거림, 모든 뒤집기. 혼자 여행하는 분에게 최고의 자리.</span>
+        </p>
+      </div>
+
+      <!-- Card 2: Kotatsu -->
+      <div class="exp-card reveal" style="transition-delay:0.15s">
+        <svg class="exp-card-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="8" y="20" width="32" height="4" rx="2" fill="currentColor" opacity="0.3"/>
+          <rect x="6" y="24" width="36" height="12" rx="3" stroke="currentColor" stroke-width="2" fill="none"/>
+          <line x1="14" y1="36" x2="12" y2="42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="34" y1="36" x2="36" y2="42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <h3>
+          <span data-lang="en">Sunken Kotatsu</span>
+          <span data-lang="zh">日式暖桌</span>
+          <span data-lang="ko">코타츠석</span>
+        </h3>
+        <p>
+          <span data-lang="en">Stretch your legs in the sunken kotatsu seating. Perfect for small groups who want to relax and linger over good food and conversation.</span>
+          <span data-lang="zh">在日式暖桌席伸展双腿，轻松惬意。三五好友一边享受美食一边畅聊的理想之选。</span>
+          <span data-lang="ko">코타츠석에서 다리를 편히 뻗으세요. 좋은 음식과 대화를 나누며 여유롭게 시간을 보내고 싶은 소규모 그룹에 딱입니다.</span>
+        </p>
+      </div>
+
+      <!-- Card 3: Solo -->
+      <div class="exp-card reveal" style="transition-delay:0.3s">
+        <svg class="exp-card-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="16" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+          <path d="M14,38 Q14,28 24,28 Q34,28 34,38" stroke="currentColor" stroke-width="2" fill="none"/>
+        </svg>
+        <h3>
+          <span data-lang="en">Solo-Friendly</span>
+          <span data-lang="zh">独行者友好</span>
+          <span data-lang="ko">혼자도 편안하게</span>
+        </h3>
+        <p>
+          <span data-lang="en">Traveling alone? This is your place. The chef's warmth, the regulars' smiles, the clinking of glasses. You'll feel at home before your first drink arrives.</span>
+          <span data-lang="zh">独自旅行？这里就是你的地方。师傅的热情、常客的微笑、杯盏交错的声响。第一杯酒还没上桌，你就已经感觉像回到了家。</span>
+          <span data-lang="ko">혼자 여행 중이신가요? 여기가 바로 당신의 장소입니다. 장인의 따뜻함, 단골들의 미소, 잔이 부딪히는 소리. 첫 잔이 오기도 전에 집처럼 편안해질 거예요.</span>
+        </p>
+      </div>
+
+      <!-- Card 4: Atmosphere -->
+      <div class="exp-card reveal" style="transition-delay:0.45s">
+        <svg class="exp-card-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M24,8 Q26,14 24,18 Q22,22 24,26" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M18,12 Q20,16 18,20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+          <path d="M30,12 Q32,16 30,20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+          <ellipse cx="24" cy="34" rx="12" ry="6" stroke="currentColor" stroke-width="2" fill="none"/>
+          <line x1="12" y1="34" x2="12" y2="40" stroke="currentColor" stroke-width="2"/>
+          <line x1="36" y1="34" x2="36" y2="40" stroke="currentColor" stroke-width="2"/>
+          <ellipse cx="24" cy="40" rx="12" ry="4" stroke="currentColor" stroke-width="2" fill="none"/>
+        </svg>
+        <h3>
+          <span data-lang="en">Intimate Atmosphere</span>
+          <span data-lang="zh">温馨氛围</span>
+          <span data-lang="ko">아늑한 분위기</span>
+        </h3>
+        <p>
+          <span data-lang="en">Wooden walls, warm light, the scent of charcoal. No crowds, no rush. Just 18 seats gathered around fire. This is how Osaka locals eat.</span>
+          <span data-lang="zh">木质墙壁、暖暖灯光、炭火的香气。没有喧嚣，没有匆忙。只有18个围坐在火旁的座位。这就是大阪人的日常。</span>
+          <span data-lang="ko">나무 벽, 따뜻한 조명, 숯의 향기. 붐비지 않고, 서두르지 않습니다. 불 주위에 모인 단 18석. 이것이 오사카 로컬들의 식사법입니다.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wave divider: dark to light -->
+<div class="wave-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" fill="none">
+    <path d="M0,0 L0,55 Q360,95 720,50 Q1080,5 1440,45 L1440,0 Z" fill="#2A1F1A"/>
+    <path d="M0,45 Q360,85 720,40 Q1080,0 1440,35 L1440,100 L0,100 Z" fill="#FAF5EF"/>
+  </svg>
+</div>
+
+<!-- ===================== INFO ===================== -->
+<section class="info" id="info">
+  <div class="info-inner">
+    <p class="section-label reveal" style="text-align:center;">
+      <span data-lang="en">Visit Us</span>
+      <span data-lang="zh">来访信息</span>
+      <span data-lang="ko">방문 안내</span>
+    </p>
+
+    <h2 class="reveal">
+      <span data-lang="en">Practical Information</span>
+      <span data-lang="zh">实用信息</span>
+      <span data-lang="ko">실용 정보</span>
+    </h2>
+
+    <div class="info-grid">
+      <div class="info-details">
+        <!-- Address -->
+        <div class="info-item reveal">
+          <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <div>
+            <h4>
+              <span data-lang="en">Address</span>
+              <span data-lang="zh">地址</span>
+              <span data-lang="ko">주소</span>
+            </h4>
+            <p>
+              <span data-lang="en">Nishida Bldg 1F, 1-12-3 Tenjinbashi, Kita-ku, Osaka</span>
+              <span data-lang="zh">大阪府大阪市北区天神桥1-12-3 西田大楼 1F</span>
+              <span data-lang="ko">오사카부 오사카시 기타구 텐진바시 1-12-3 니시다빌딩 1F</span>
+            </p>
+            <p style="font-size:0.85rem; color:#8B5E3C; margin-top:0.25rem;">
+              大阪府大阪市北区天神橋1-12-3 西田ビル 1F
+            </p>
+          </div>
+        </div>
+
+        <!-- Access -->
+        <div class="info-item reveal">
+          <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="6" width="20" height="12" rx="2"/>
+            <path d="M2,10 L22,10"/>
+          </svg>
+          <div>
+            <h4>
+              <span data-lang="en">Access</span>
+              <span data-lang="zh">交通</span>
+              <span data-lang="ko">교통</span>
+            </h4>
+            <p>
+              <span data-lang="en">5 min walk from JR Osaka-Tenmangu Station or Minami-Morimachi Station (Osaka Metro)</span>
+              <span data-lang="zh">从JR大阪天满宫站或地铁南森町站步行5分钟</span>
+              <span data-lang="ko">JR 오사카텐만구역 또는 지하철 미나미모리마치역에서 도보 5분</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div class="info-item reveal">
+          <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <div>
+            <h4>
+              <span data-lang="en">Hours</span>
+              <span data-lang="zh">营业时间</span>
+              <span data-lang="ko">영업시간</span>
+            </h4>
+            <p>
+              <span data-lang="en">Monday - Saturday: 17:30 - 23:00<br>Closed Sundays &amp; Holidays</span>
+              <span data-lang="zh">周一至周六: 17:30 - 23:00<br>周日及节假日休息</span>
+              <span data-lang="ko">월요일 - 토요일: 17:30 - 23:00<br>일요일 및 공휴일 휴무</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Budget -->
+        <div class="info-item reveal">
+          <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+          <div>
+            <h4>
+              <span data-lang="en">Budget</span>
+              <span data-lang="zh">人均消费</span>
+              <span data-lang="ko">예산</span>
+            </h4>
+            <p>
+              <span data-lang="en">Approx. &yen;4,000 - &yen;5,000 per person</span>
+              <span data-lang="zh">人均约 &yen;4,000 - &yen;5,000</span>
+              <span data-lang="ko">1인당 약 &yen;4,000 - &yen;5,000</span>
+            </p>
+            <!-- Card Accepted Badge -->
+            <div class="cash-badge" style="border-color: var(--amber); color: var(--amber);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <rect x="2" y="5" width="20" height="14" rx="2"/>
+                <line x1="2" y1="10" x2="22" y2="10"/>
+              </svg>
+              <span data-lang="en">VISA / Mastercard</span>
+              <span data-lang="zh">可使用Visa/Mastercard</span>
+              <span data-lang="ko">Visa/Mastercard 가능</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="info-item reveal">
+          <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <div>
+            <h4>
+              <span data-lang="en">Telephone</span>
+              <span data-lang="zh">电话</span>
+              <span data-lang="ko">전화</span>
+            </h4>
+            <p><a href="tel:06-6882-6675" style="color:var(--brown);">06-6882-6675</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="info-map reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.5!2d135.5116279!3d34.6942246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6d915a196f5%3A0xd0880ca55613b0d1!2z56yR6ZaA6YWS5oi_IOOBoOOCk-OBkQ!5e0!3m2!1sen!2sjp!4v1"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Danke Izakaya location map"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wave divider: light to dark -->
+<div class="wave-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" fill="none">
+    <path d="M0,0 L0,40 Q360,80 720,35 Q1080,0 1440,50 L1440,0 Z" fill="#FAF5EF"/>
+    <path d="M0,30 Q360,70 720,25 Q1080,0 1440,40 L1440,100 L0,100 Z" fill="#2A1F1A"/>
+  </svg>
+</div>
+
+<!-- ===================== CTA ===================== -->
+<section class="cta" id="cta">
+  <div style="position:relative; z-index:1;">
+    <p class="section-label reveal" style="color:rgba(212,165,116,0.6);">
+      笑門酒房 だんけ
+    </p>
+
+    <h2 class="reveal">
+      <span data-lang="en">Find Your Seat</span>
+      <span data-lang="zh">找到你的座位</span>
+      <span data-lang="ko">당신의 자리를 찾으세요</span>
+    </h2>
+
+    <p class="cta-sub reveal">
+      <span data-lang="en">We're waiting for you.</span>
+      <span data-lang="zh">我们在等你。</span>
+      <span data-lang="ko">기다리고 있겠습니다.</span>
+    </p>
+
+    <a href="https://www.google.com/maps/place/%E7%AC%91%E9%96%80%E9%85%92%E6%88%BF+%E3%81%A0%E3%82%93%E3%81%91/@34.694229,135.5090476,17z/data=!3m1!4b1!4m6!3m5!1s0x6000e6d915a196f5:0xd0880ca55613b0d1!8m2!3d34.6942246!4d135.5116279!16s%2Fg%2F11b7hds7d6" target="_blank" rel="noopener noreferrer" class="cta-btn reveal" style="transition-delay:0.15s">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </svg>
+      <span data-lang="en">Open in Google Maps</span>
+      <span data-lang="zh">在Google Maps中打开</span>
+      <span data-lang="ko">Google Maps에서 열기</span>
+    </a>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <p>&copy; 笑門酒房 だんけ &mdash; Tenjinbashi, Osaka</p>
+</footer>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+(function() {
+  'use strict';
+
+  /* ---- Language Switcher ---- */
+  const langBtns = document.querySelectorAll('[data-switch-lang]');
+  langBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var lang = this.getAttribute('data-switch-lang');
+      document.body.setAttribute('data-active-lang', lang);
+      langBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+    });
+  });
+
+  /* ---- IntersectionObserver for reveal animations ---- */
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReduced) {
+    var reveals = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    reveals.forEach(function(el) {
+      // Hero elements should be visible immediately on load
+      if (el.closest('.hero')) {
+        el.classList.add('visible');
+      } else {
+        observer.observe(el);
+      }
+    });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      el.classList.add('visible');
+    });
+  }
+
+  /* ---- Steam & Ember Particles ---- */
+  if (!prefersReduced) {
+    var container = document.getElementById('steam-container');
+
+    // Steam wisps
+    for (var i = 0; i < 15; i++) {
+      var particle = document.createElement('div');
+      particle.className = 'steam-particle';
+      particle.style.left = (20 + Math.random() * 60) + '%';
+      particle.style.bottom = (Math.random() * 20) + '%';
+      particle.style.animationDuration = (6 + Math.random() * 8) + 's';
+      particle.style.animationDelay = (Math.random() * 10) + 's';
+      particle.style.width = (1 + Math.random() * 2) + 'px';
+      particle.style.height = particle.style.width;
+      container.appendChild(particle);
+    }
+
+    // Ember dots
+    for (var j = 0; j < 8; j++) {
+      var ember = document.createElement('div');
+      ember.className = 'ember';
+      ember.style.left = (30 + Math.random() * 40) + '%';
+      ember.style.bottom = (5 + Math.random() * 25) + '%';
+      ember.style.animationDuration = (4 + Math.random() * 6) + 's';
+      ember.style.animationDelay = (Math.random() * 8) + 's';
+      container.appendChild(ember);
+    }
+  }
+
+  /* ---- Smooth scroll for anchor links ---- */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+})();
+</script>
+</body>
+</html>
