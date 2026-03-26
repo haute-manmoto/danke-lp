@@ -20,10 +20,16 @@
 <meta property="og:locale:alternate" content="ko_KR">
 <meta property="og:site_name" content="笑門酒房 だんけ | Danke Izakaya">
 
+<!-- OG Image -->
+<meta property="og:image" content="https://haute-manmoto.github.io/danke-lp/images/lava-yakitori.jpg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="800">
+
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Danke Izakaya — Lava Stone Grilled Yakitori in Osaka">
 <meta name="twitter:description" content="Hidden gem izakaya in Tenjinbashi, Osaka. Yakitori grilled on volcanic lava stone. Just 18 seats.">
+<meta name="twitter:image" content="https://haute-manmoto.github.io/danke-lp/images/lava-yakitori.jpg">
 
 <!-- Structured Data: Restaurant -->
 <script type="application/ld+json">
@@ -758,6 +764,77 @@ body[data-active-lang="ko"] a[data-lang="en"] { display: none; }
 }
 
 /* ========================================
+   SECTION: FOOD GALLERY (KV)
+   ======================================== */
+.food-gallery {
+  padding: 0 0 0;
+  background: var(--light);
+  overflow: hidden;
+}
+
+.food-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+@media (min-width: 640px) {
+  .food-gallery-grid { grid-template-columns: 1fr 1fr 1fr 1fr; }
+}
+
+.food-gallery-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.food-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.food-gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.food-gallery-item .food-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1rem 0.75rem;
+  background: linear-gradient(transparent, rgba(42, 31, 26, 0.85));
+  color: var(--light);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.food-gallery-item:hover .food-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Story section photo */
+.story-photo {
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 2rem 0;
+  box-shadow: 0 8px 32px rgba(42, 31, 26, 0.15);
+}
+
+.story-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========================================
    RESPONSIVE
    ======================================== */
 @media (min-width: 768px) {
@@ -824,6 +901,44 @@ body[data-active-lang="ko"] a[data-lang="en"] { display: none; }
   </div>
 </section>
 
+<!-- ===================== FOOD GALLERY (KV) ===================== -->
+<section class="food-gallery" aria-label="Food gallery">
+  <div class="food-gallery-grid">
+    <div class="food-gallery-item">
+      <img src="images/lava-yakitori.jpg" alt="Lava stone grilled yakitori - signature dish at Danke Izakaya" loading="eager" width="800" height="800">
+      <div class="food-label">
+        <span data-lang="en">Lava Stone Yakitori</span>
+        <span data-lang="zh">熔岩石烤鸡</span>
+        <span data-lang="ko">용암석 야키토리</span>
+      </div>
+    </div>
+    <div class="food-gallery-item">
+      <img src="images/chicken-tataki.jpg" alt="Chicken tataki garnished with shiso and edible flowers" loading="eager" width="800" height="800">
+      <div class="food-label">
+        <span data-lang="en">Chicken Tataki</span>
+        <span data-lang="zh">鸡肉刺身</span>
+        <span data-lang="ko">치킨 타타키</span>
+      </div>
+    </div>
+    <div class="food-gallery-item">
+      <img src="images/lava-pizza.jpg" alt="Lava stone pizza with basil and melted cheese" loading="eager" width="800" height="800">
+      <div class="food-label">
+        <span data-lang="en">Lava Stone Pizza</span>
+        <span data-lang="zh">熔岩石披萨</span>
+        <span data-lang="ko">용암석 피자</span>
+      </div>
+    </div>
+    <div class="food-gallery-item">
+      <img src="images/yakitori-skewers.jpg" alt="Assorted yakitori skewers with lemon" loading="eager" width="800" height="800">
+      <div class="food-label">
+        <span data-lang="en">Yakitori Skewers</span>
+        <span data-lang="zh">烤鸡肉串拼盘</span>
+        <span data-lang="ko">야키토리 모듬</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Wave divider: dark to light -->
 <div class="wave-divider" aria-hidden="true">
   <svg viewBox="0 0 1440 100" preserveAspectRatio="none" fill="none">
@@ -846,6 +961,10 @@ body[data-active-lang="ko"] a[data-lang="en"] { display: none; }
       <span data-lang="zh">熔岩石上的匠心</span>
       <span data-lang="ko">용암석 위의 장인 정신</span>
     </h2>
+
+    <div class="story-photo reveal">
+      <img src="images/lava-yakitori.jpg" alt="Lava stone grilled yakitori at Danke" width="800" height="800">
+    </div>
 
     <!-- EN -->
     <div data-lang="en">
