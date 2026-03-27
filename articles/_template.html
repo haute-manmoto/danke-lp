@@ -1,0 +1,327 @@
+<!--
+  ARTICLE TEMPLATE — Danke Izakaya
+  =================================
+  For mass-producing articles. Replace all {{PLACEHOLDER}} markers.
+
+  TEMPLATE PLACEHOLDERS:
+  {{ARTICLE_SLUG}}        — URL slug (e.g., "lava-stone-grilling")
+  {{ARTICLE_TITLE_EN}}    — English title
+  {{ARTICLE_TITLE_ZH}}    — Chinese title
+  {{ARTICLE_TITLE_KO}}    — Korean title
+  {{META_DESCRIPTION_EN}} — English meta description (150 chars max)
+  {{PUBLISH_DATE}}        — ISO date (e.g., "2026-03-27")
+  {{OG_IMAGE}}            — OG image filename (e.g., "momo.jpg")
+  {{HERO_IMAGE}}          — Hero image filename
+  {{ARTICLE_CONTENT_EN}}  — English article body (HTML with <h2>, <h3>, <p>, <blockquote>, <ul>, etc.)
+  {{ARTICLE_CONTENT_ZH}}  — Chinese article body (HTML)
+  {{ARTICLE_CONTENT_KO}}  — Korean article body (HTML)
+  {{RELATED_ARTICLES}}    — 2-3 article card HTML blocks (use .article-card component)
+-->
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ARTICLE_TITLE_EN}} - Danke Izakaya | Osaka</title>
+<meta name="description" content="{{META_DESCRIPTION_EN}}">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://haute-manmoto.github.io/danke-lp/articles/{{ARTICLE_SLUG}}/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ARTICLE_TITLE_EN}} - Danke Izakaya">
+<meta property="og:description" content="{{META_DESCRIPTION_EN}}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://haute-manmoto.github.io/danke-lp/articles/{{ARTICLE_SLUG}}/">
+<meta property="og:image" content="https://haute-manmoto.github.io/danke-lp/images/{{OG_IMAGE}}">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:site_name" content="笑門酒房 だんけ | Danke Izakaya">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ARTICLE_TITLE_EN}} - Danke Izakaya">
+<meta name="twitter:description" content="{{META_DESCRIPTION_EN}}">
+<meta name="twitter:image" content="https://haute-manmoto.github.io/danke-lp/images/{{OG_IMAGE}}">
+
+<!-- Schema.org Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ARTICLE_TITLE_EN}}",
+  "description": "{{META_DESCRIPTION_EN}}",
+  "image": "https://haute-manmoto.github.io/danke-lp/images/{{OG_IMAGE}}",
+  "datePublished": "{{PUBLISH_DATE}}",
+  "author": {
+    "@type": "Organization",
+    "name": "Danke Izakaya"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "笑門酒房 だんけ",
+    "url": "https://haute-manmoto.github.io/danke-lp/"
+  }
+}
+</script>
+
+<!-- Fonts & CSS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body data-active-lang="en">
+
+<!-- ===================== LANGUAGE SWITCHER & NAV ===================== -->
+<nav class="lang-switcher" role="navigation" aria-label="Language and Navigation">
+  <div class="site-nav">
+    <a href="../../" class="site-nav__link">Home</a>
+    <a href="../../menu/yakitori/" class="site-nav__link">
+      <span data-lang="en">Yakitori</span>
+      <span data-lang="zh">烤鸡串</span>
+      <span data-lang="ko">야키토리</span>
+    </a>
+    <a href="../../menu/sake-shochu/" class="site-nav__link">
+      <span data-lang="en">Sake</span>
+      <span data-lang="zh">清酒</span>
+      <span data-lang="ko">사케</span>
+    </a>
+    <a href="../" class="site-nav__link active">
+      <span data-lang="en">Articles</span>
+      <span data-lang="zh">文章</span>
+      <span data-lang="ko">기사</span>
+    </a>
+  </div>
+  <div>
+    <button class="lang-btn active" data-switch-lang="en" aria-label="English">EN</button>
+    <button class="lang-btn" data-switch-lang="zh" aria-label="Chinese">中文</button>
+    <button class="lang-btn" data-switch-lang="ko" aria-label="Korean">한국어</button>
+  </div>
+</nav>
+
+<!-- ===================== BREADCRUMB ===================== -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="../../">Home</a></li>
+    <li><a href="../">
+      <span data-lang="en">Articles</span>
+      <span data-lang="zh">文章</span>
+      <span data-lang="ko">기사</span>
+    </a></li>
+    <li>
+      <span class="current" data-lang="en">{{ARTICLE_TITLE_EN}}</span>
+      <span class="current" data-lang="zh">{{ARTICLE_TITLE_ZH}}</span>
+      <span class="current" data-lang="ko">{{ARTICLE_TITLE_KO}}</span>
+    </li>
+  </ol>
+</nav>
+
+<!-- ===================== PAGE HEADER ===================== -->
+<header class="page-header">
+  <time datetime="{{PUBLISH_DATE}}" style="font-size:0.8rem; color:var(--amber); opacity:0.6; letter-spacing:0.1em; display:block; margin-bottom:1rem;">{{PUBLISH_DATE}}</time>
+  <h1 class="reveal">
+    <span data-lang="en">{{ARTICLE_TITLE_EN}}</span>
+    <span data-lang="zh">{{ARTICLE_TITLE_ZH}}</span>
+    <span data-lang="ko">{{ARTICLE_TITLE_KO}}</span>
+  </h1>
+</header>
+
+<!-- ===================== HERO IMAGE ===================== -->
+<div style="max-width:900px; margin:0 auto; padding:0 1rem;">
+  <img src="../../images/{{HERO_IMAGE}}" alt="{{ARTICLE_TITLE_EN}}" style="width:100%; border-radius:8px; margin:2rem 0;" loading="eager">
+</div>
+
+<!-- ===================== ARTICLE BODY ===================== -->
+<article class="article-body">
+  <!-- === ENGLISH === -->
+  <div data-lang="en">
+    {{ARTICLE_CONTENT_EN}}
+  </div>
+
+  <!-- === CHINESE === -->
+  <div data-lang="zh">
+    {{ARTICLE_CONTENT_ZH}}
+  </div>
+
+  <!-- === KOREAN === -->
+  <div data-lang="ko">
+    {{ARTICLE_CONTENT_KO}}
+  </div>
+</article>
+
+<!-- ===================== RELATED ARTICLES ===================== -->
+<section style="background:var(--dark); padding:clamp(3rem,6vw,5rem) clamp(1rem,4vw,2rem);">
+  <div style="max-width:900px; margin:0 auto;">
+    <h2 style="color:var(--light); text-align:center; margin-bottom:2rem; font-family:var(--font-heading);">
+      <span data-lang="en">More Articles</span>
+      <span data-lang="zh">更多文章</span>
+      <span data-lang="ko">더 많은 기사</span>
+    </h2>
+    <div class="articles-grid" style="padding:0;">
+      {{RELATED_ARTICLES}}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STORE INFO COMPACT ===================== -->
+<section class="store-info-compact">
+  <div class="store-info-compact-inner">
+    <!-- Address -->
+    <div class="store-info-compact-item">
+      <svg class="compact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </svg>
+      <div>
+        <h4>
+          <span data-lang="en">Address</span>
+          <span data-lang="zh">地址</span>
+          <span data-lang="ko">주소</span>
+        </h4>
+        <p>
+          <span data-lang="en">Nishida Bldg 1F, 1-12-3 Tenjinbashi, Kita-ku, Osaka</span>
+          <span data-lang="zh">大阪府大阪市北区天神桥1-12-3 西田大楼 1F</span>
+          <span data-lang="ko">오사카부 오사카시 기타구 텐진바시 1-12-3 니시다빌딩 1F</span>
+        </p>
+      </div>
+    </div>
+    <!-- Hours -->
+    <div class="store-info-compact-item">
+      <svg class="compact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <polyline points="12 6 12 12 16 14"/>
+      </svg>
+      <div>
+        <h4>
+          <span data-lang="en">Hours</span>
+          <span data-lang="zh">营业时间</span>
+          <span data-lang="ko">영업시간</span>
+        </h4>
+        <p>
+          <span data-lang="en">Mon–Sat 17:30–23:00<br>Closed Sun &amp; Holidays</span>
+          <span data-lang="zh">周一至周六 17:30–23:00<br>周日及节假日休息</span>
+          <span data-lang="ko">월–토 17:30–23:00<br>일요일·공휴일 휴무</span>
+        </p>
+      </div>
+    </div>
+    <!-- Phone -->
+    <div class="store-info-compact-item">
+      <svg class="compact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <div>
+        <h4>
+          <span data-lang="en">Telephone</span>
+          <span data-lang="zh">电话</span>
+          <span data-lang="ko">전화</span>
+        </h4>
+        <p><a href="tel:06-6882-6675">06-6882-6675</a></p>
+      </div>
+    </div>
+    <!-- Map CTA -->
+    <div class="store-info-compact-item">
+      <svg class="compact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="2" y="6" width="20" height="12" rx="2"/>
+        <path d="M2,10 L22,10"/>
+      </svg>
+      <div>
+        <h4>
+          <span data-lang="en">Access</span>
+          <span data-lang="zh">交通</span>
+          <span data-lang="ko">교통</span>
+        </h4>
+        <p>
+          <span data-lang="en">5 min walk from JR Osaka-Tenmangu Sta. or Minami-Morimachi Sta.</span>
+          <span data-lang="zh">从JR大阪天满宫站或地铁南森町站步行5分钟</span>
+          <span data-lang="ko">JR 오사카텐만구역 또는 미나미모리마치역에서 도보 5분</span>
+        </p>
+        <a href="https://www.google.com/maps/search/笑門酒房+だんけ+天神橋" target="_blank" rel="noopener noreferrer" class="compact-cta" style="margin-top:0.75rem;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:16px; height:16px;">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span data-lang="en">Google Maps</span>
+          <span data-lang="zh">谷歌地图</span>
+          <span data-lang="ko">구글 지도</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <nav style="margin-bottom:0.75rem; display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap; font-size:0.85rem;">
+    <a href="../../" style="color:var(--amber); text-decoration:none;">Home</a>
+    <a href="../../menu/yakitori/" style="color:var(--amber); text-decoration:none;">
+      <span data-lang="en">Yakitori</span><span data-lang="zh">烤鸡串</span><span data-lang="ko">야키토리</span>
+    </a>
+    <a href="../../menu/sake-shochu/" style="color:var(--amber); text-decoration:none;">
+      <span data-lang="en">Sake &amp; Shochu</span><span data-lang="zh">清酒·烧酒</span><span data-lang="ko">사케·소주</span>
+    </a>
+    <a href="../" style="color:var(--amber); text-decoration:none;">
+      <span data-lang="en">Articles</span><span data-lang="zh">文章</span><span data-lang="ko">기사</span>
+    </a>
+  </nav>
+  <p>&copy; 笑門酒房 だんけ &mdash; Tenjinbashi, Osaka</p>
+</footer>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+(function() {
+  'use strict';
+
+  /* ---- Language Switcher ---- */
+  var langBtns = document.querySelectorAll('[data-switch-lang]');
+  langBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var lang = this.getAttribute('data-switch-lang');
+      document.body.setAttribute('data-active-lang', lang);
+      langBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+    });
+  });
+
+  /* ---- IntersectionObserver for reveal animations ---- */
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReduced) {
+    var reveals = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    reveals.forEach(function(el) {
+      if (el.closest('.page-header')) {
+        el.classList.add('visible');
+      } else {
+        observer.observe(el);
+      }
+    });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      el.classList.add('visible');
+    });
+  }
+
+  /* ---- Smooth scroll for anchor links ---- */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

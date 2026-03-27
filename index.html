@@ -2,10 +2,13 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>笑門酒房 だんけ | Danke Izakaya - Lava Stone Yakitori, Osaka</title>
-<meta name="description" content="Hidden gem izakaya in Osaka's Tenjinbashi. Lava stone grilled yakitori, 18 intimate seats. A neighborhood spot where fire, stone, and soul come together.">
-<meta name="keywords" content="izakaya Osaka, yakitori Osaka, lava stone grill, Tenjinbashi restaurant, hidden gem Osaka, Japanese restaurant, 焼き鶏, 居酒屋 大阪, 天神橋 居酒屋, 溶岩焼き, 오사카 이자카야, 야키토리, 大阪居酒屋, 烤鸡肉串">
+<title>笑門酒房 だんけ | 南森町・天神橋の焼き鳥居酒屋 - Yakitori Izakaya Osaka</title>
+<meta name="description" content="南森町・天神橋の焼き鳥居酒屋「だんけ」。溶岩石で焼く焼き鳥が名物。JR大阪天満宮駅・南森町駅徒歩5分。Hidden yakitori izakaya near Minamimorimachi, Tenjinbashi, Osaka.">
+<meta name="keywords" content="焼き鳥 南森町, 焼き鳥 天神橋, yakitori Minamimorimachi, yakitori Tenjinbashi, izakaya Osaka, lava stone grill, 居酒屋 南森町, 天神橋 居酒屋, 溶岩焼き, 오사카 이자카야, 야키토리, 南森町 グルメ, 天神橋筋商店街 居酒屋">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://haute-manmoto.github.io/danke-lp/">
 
@@ -21,7 +24,7 @@
 <meta property="og:site_name" content="笑門酒房 だんけ | Danke Izakaya">
 
 <!-- OG Image -->
-<meta property="og:image" content="https://haute-manmoto.github.io/danke-lp/images/lava-yakitori.jpg">
+<meta property="og:image" content="https://haute-manmoto.github.io/danke-lp/images/hero-desktop.jpg">
 <meta property="og:image:width" content="800">
 <meta property="og:image:height" content="800">
 
@@ -29,7 +32,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Danke Izakaya — Lava Stone Grilled Yakitori in Osaka">
 <meta name="twitter:description" content="Hidden gem izakaya in Tenjinbashi, Osaka. Yakitori grilled on volcanic lava stone. Just 18 seats.">
-<meta name="twitter:image" content="https://haute-manmoto.github.io/danke-lp/images/lava-yakitori.jpg">
+<meta name="twitter:image" content="https://haute-manmoto.github.io/danke-lp/images/hero-desktop.jpg">
 
 <!-- Structured Data: Restaurant -->
 <script type="application/ld+json">
@@ -93,773 +96,30 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-/* ========================================
-   CSS CUSTOM PROPERTIES
-   ======================================== */
-:root {
-  --amber: #D4A574;
-  --brown: #8B5E3C;
-  --dark: #2A1F1A;
-  --light: #FAF5EF;
-  --lava: #E8734A;
-  --lava-glow: #E8734A33;
-
-  --font-heading: 'Noto Serif JP', serif;
-  --font-body-jp: 'Noto Sans JP', sans-serif;
-  --font-body: 'Inter', var(--font-body-jp), sans-serif;
-
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --transition-reveal: 0.9s var(--ease-out);
-}
-
-/* ========================================
-   RESET & BASE
-   ======================================== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: var(--font-body);
-  background: var(--light);
-  color: var(--dark);
-  line-height: 1.7;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-
-img, svg { display: block; max-width: 100%; }
-a { color: inherit; text-decoration: none; }
-button { font: inherit; cursor: pointer; border: none; background: none; }
-
-/* ========================================
-   WASHI PAPER NOISE TEXTURE OVERLAY
-   ======================================== */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.025;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 256px 256px;
-}
-
-/* ========================================
-   TYPOGRAPHY
-   ======================================== */
-h1, h2, h3, h4 {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-.section-label {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--amber);
-  margin-bottom: 1rem;
-}
-
-/* ========================================
-   LANGUAGE SWITCHER
-   ======================================== */
-.lang-switcher {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  gap: 0;
-  padding: 0.75rem 1rem;
-  background: rgba(42, 31, 26, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(212, 165, 116, 0.15);
-}
-
-.lang-btn {
-  padding: 0.4rem 1.2rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: rgba(250, 245, 239, 0.55);
-  letter-spacing: 0.08em;
-  transition: color 0.3s, background 0.3s;
-  border-radius: 2px;
-  position: relative;
-}
-
-.lang-btn:hover { color: var(--light); }
-.lang-btn.active {
-  color: var(--light);
-  background: rgba(212, 165, 116, 0.2);
-}
-
-.lang-btn + .lang-btn::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 25%;
-  height: 50%;
-  width: 1px;
-  background: rgba(250, 245, 239, 0.15);
-}
-
-/* hide non-active languages */
-[data-lang] { display: none; }
-[data-lang="en"] { display: block; }
-body[data-active-lang="zh"] [data-lang="zh"] { display: block; }
-body[data-active-lang="zh"] [data-lang="en"] { display: none; }
-body[data-active-lang="ko"] [data-lang="ko"] { display: block; }
-body[data-active-lang="ko"] [data-lang="en"] { display: none; }
-
-/* inline elements */
-span[data-lang], a[data-lang] { display: none; }
-span[data-lang="en"], a[data-lang="en"] { display: inline; }
-body[data-active-lang="zh"] span[data-lang="zh"],
-body[data-active-lang="zh"] a[data-lang="zh"] { display: inline; }
-body[data-active-lang="zh"] span[data-lang="en"],
-body[data-active-lang="zh"] a[data-lang="en"] { display: none; }
-body[data-active-lang="ko"] span[data-lang="ko"],
-body[data-active-lang="ko"] a[data-lang="ko"] { display: inline; }
-body[data-active-lang="ko"] span[data-lang="en"],
-body[data-active-lang="ko"] a[data-lang="en"] { display: none; }
-
-/* ========================================
-   REVEAL ANIMATIONS
-   ======================================== */
-.reveal {
-  opacity: 0;
-  transform: translateY(32px);
-  transition: opacity var(--transition-reveal), transform var(--transition-reveal);
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
-  .steam-particle { animation: none !important; }
-  .ember { animation: none !important; }
-  html { scroll-behavior: auto; }
-}
-
-/* ========================================
-   SECTION: HERO
-   ======================================== */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 6rem 1.5rem 4rem;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(175deg, var(--dark) 0%, #3D2B1E 35%, #5A3D2B 60%, var(--brown) 100%);
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 60% 50% at 50% 70%, rgba(232, 115, 74, 0.12) 0%, transparent 70%),
-              radial-gradient(ellipse 80% 40% at 50% 90%, rgba(212, 165, 116, 0.08) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-.hero-noren {
-  position: absolute;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 160px;
-  opacity: 0.2;
-}
-
-.hero-noren-bar {
-  width: 100%;
-  height: 3px;
-  background: var(--amber);
-  border-radius: 2px;
-}
-
-.hero-noren-panel {
-  width: 28px;
-  height: 60px;
-  background: linear-gradient(180deg, var(--amber) 0%, rgba(212, 165, 116, 0) 100%);
-  border-radius: 0 0 14px 14px;
-  display: inline-block;
-  margin: 2px 8px 0;
-}
-
-.hero-shop-name {
-  font-family: var(--font-heading);
-  font-size: clamp(0.85rem, 2vw, 1rem);
-  color: var(--amber);
-  letter-spacing: 0.25em;
-  margin-bottom: 1.5rem;
-  opacity: 0.7;
-}
-
-.hero h1 {
-  font-size: clamp(2rem, 6vw, 4rem);
-  color: var(--light);
-  margin-bottom: 1.25rem;
-  max-width: 700px;
-}
-
-.hero-sub {
-  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
-  color: var(--amber);
-  max-width: 500px;
-  margin-bottom: 0.75rem;
-  line-height: 1.8;
-}
-
-.hero-tagline {
-  font-size: clamp(0.8rem, 2vw, 0.95rem);
-  color: rgba(250, 245, 239, 0.5);
-  max-width: 480px;
-  line-height: 1.8;
-}
-
-.hero-scroll {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  color: rgba(250, 245, 239, 0.3);
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-}
-
-.hero-scroll-line {
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(180deg, rgba(212, 165, 116, 0.4), transparent);
-  animation: scrollPulse 2s ease-in-out infinite;
-}
-
-@keyframes scrollPulse {
-  0%, 100% { opacity: 0.3; transform: scaleY(1); }
-  50% { opacity: 0.8; transform: scaleY(1.2); }
-}
-
-/* steam particles */
-.steam-container {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.steam-particle {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: rgba(250, 245, 239, 0.15);
-  border-radius: 50%;
-  animation: steamRise linear infinite;
-}
-
-@keyframes steamRise {
-  0% {
-    transform: translateY(0) translateX(0) scale(1);
-    opacity: 0;
-  }
-  10% { opacity: 0.6; }
-  50% { opacity: 0.3; }
-  100% {
-    transform: translateY(-100vh) translateX(30px) scale(3);
-    opacity: 0;
-  }
-}
-
-/* ember dots */
-.ember {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: var(--lava);
-  animation: emberFloat linear infinite;
-  filter: blur(0.5px);
-}
-
-@keyframes emberFloat {
-  0% {
-    transform: translateY(0) translateX(0);
-    opacity: 0;
-  }
-  20% { opacity: 0.8; }
-  80% { opacity: 0.2; }
-  100% {
-    transform: translateY(-60vh) translateX(-20px);
-    opacity: 0;
-  }
-}
-
-/* ========================================
-   SVG WAVE DIVIDERS
-   ======================================== */
-.wave-divider {
-  width: 100%;
-  display: block;
-  margin: -1px 0;
-  line-height: 0;
-}
-
-.wave-divider svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ========================================
-   SECTION: STORY
-   ======================================== */
-.story {
-  padding: 5rem 1.5rem;
-  background: var(--light);
-  position: relative;
-}
-
-.story-inner {
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.story h2 {
-  font-size: clamp(1.6rem, 4vw, 2.5rem);
-  color: var(--dark);
-  margin-bottom: 2rem;
-}
-
-.story-text {
-  font-size: 1rem;
-  color: #5a4a3e;
-  line-height: 2;
-  margin-bottom: 2rem;
-}
-
-/* Lava stone texture block */
-.lava-block {
-  position: relative;
-  border-radius: 16px;
-  padding: 2.5rem 2rem;
-  margin: 2.5rem 0;
-  overflow: hidden;
-  background:
-    radial-gradient(ellipse 30% 40% at 20% 30%, rgba(232, 115, 74, 0.15), transparent),
-    radial-gradient(ellipse 25% 35% at 70% 60%, rgba(212, 165, 116, 0.12), transparent),
-    radial-gradient(ellipse 40% 30% at 50% 80%, rgba(232, 115, 74, 0.08), transparent),
-    linear-gradient(135deg, #3D2B1E 0%, var(--dark) 50%, #3D2B1E 100%);
-  color: var(--light);
-}
-
-.lava-block::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle 4px at 15% 25%, rgba(232, 115, 74, 0.25), transparent 8px),
-    radial-gradient(circle 3px at 45% 15%, rgba(212, 165, 116, 0.2), transparent 6px),
-    radial-gradient(circle 5px at 75% 45%, rgba(232, 115, 74, 0.15), transparent 10px),
-    radial-gradient(circle 3px at 30% 70%, rgba(212, 165, 116, 0.18), transparent 6px),
-    radial-gradient(circle 4px at 85% 80%, rgba(232, 115, 74, 0.2), transparent 8px),
-    radial-gradient(circle 2px at 55% 55%, rgba(250, 245, 239, 0.1), transparent 4px);
-  pointer-events: none;
-}
-
-.lava-block h3 {
-  font-size: 1.15rem;
-  color: var(--amber);
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-.lava-block p {
-  font-size: 0.95rem;
-  line-height: 1.9;
-  position: relative;
-  color: rgba(250, 245, 239, 0.85);
-}
-
-/* Flame SVG decoration */
-.flame-deco {
-  position: absolute;
-  top: -20px;
-  right: 20px;
-  opacity: 0.15;
-}
-
-/* ========================================
-   SECTION: EXPERIENCE
-   ======================================== */
-.experience {
-  padding: 5rem 1.5rem;
-  background: linear-gradient(180deg, #3D2B1E 0%, var(--dark) 100%);
-  color: var(--light);
-  position: relative;
-}
-
-.experience-inner {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.experience h2 {
-  font-size: clamp(1.6rem, 4vw, 2.5rem);
-  margin-bottom: 1rem;
-}
-
-.experience-sub {
-  color: var(--amber);
-  font-size: 1rem;
-  margin-bottom: 3rem;
-  opacity: 0.8;
-}
-
-.experience-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  text-align: left;
-}
-
-@media (min-width: 640px) {
-  .experience-grid { grid-template-columns: 1fr 1fr; }
-}
-
-.exp-card {
-  background: rgba(250, 245, 239, 0.04);
-  border: 1px solid rgba(212, 165, 116, 0.1);
-  border-radius: 12px;
-  padding: 2rem 1.5rem;
-  position: relative;
-  overflow: hidden;
-  transition: border-color 0.4s, background 0.4s;
-}
-
-.exp-card:hover {
-  border-color: rgba(212, 165, 116, 0.25);
-  background: rgba(250, 245, 239, 0.06);
-}
-
-.exp-card-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 1rem;
-  color: var(--amber);
-}
-
-.exp-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
-  color: var(--light);
-}
-
-.exp-card p {
-  font-size: 0.9rem;
-  color: rgba(250, 245, 239, 0.6);
-  line-height: 1.8;
-}
-
-/* ambient glow */
-.experience::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  height: 60%;
-  background: radial-gradient(ellipse, rgba(232, 115, 74, 0.06), transparent 70%);
-  pointer-events: none;
-}
-
-/* ========================================
-   SECTION: INFO
-   ======================================== */
-.info {
-  padding: 5rem 1.5rem;
-  background: var(--light);
-}
-
-.info-inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.info h2 {
-  font-size: clamp(1.6rem, 4vw, 2.5rem);
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.info-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-@media (min-width: 700px) {
-  .info-grid { grid-template-columns: 1fr 1fr; }
-}
-
-.info-details {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.info-item {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.info-icon {
-  flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  color: var(--brown);
-  margin-top: 2px;
-}
-
-.info-item h4 {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--brown);
-  margin-bottom: 0.25rem;
-}
-
-.info-item p {
-  font-size: 0.95rem;
-  color: #5a4a3e;
-  line-height: 1.7;
-}
-
-/* Card accepted badge */
-.cash-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  background: #F0EBE3;
-  border: 1.5px solid var(--amber);
-  color: var(--brown);
-  font-weight: 600;
-  font-size: 0.85rem;
-  padding: 0.4rem 0.9rem;
-  border-radius: 6px;
-  margin-top: 0.5rem;
-}
-
-.cash-badge svg {
-  width: 16px;
-  height: 16px;
-}
-
-/* Map container */
-.info-map {
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid rgba(139, 94, 60, 0.15);
-  min-height: 300px;
-}
-
-.info-map iframe {
-  width: 100%;
-  height: 100%;
-  min-height: 300px;
-  border: 0;
-}
-
-/* ========================================
-   SECTION: CTA
-   ======================================== */
-.cta {
-  padding: 6rem 1.5rem;
-  text-align: center;
-  background: linear-gradient(180deg, var(--dark) 0%, #1A1210 100%);
-  color: var(--light);
-  position: relative;
-  overflow: hidden;
-}
-
-.cta::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 200px;
-  background: radial-gradient(ellipse, rgba(232, 115, 74, 0.08), transparent 70%);
-  pointer-events: none;
-}
-
-.cta h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 1rem;
-}
-
-.cta-sub {
-  color: rgba(250, 245, 239, 0.5);
-  font-size: 1rem;
-  margin-bottom: 2.5rem;
-}
-
-.cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: var(--lava);
-  color: var(--light);
-  font-weight: 600;
-  font-size: 1.05rem;
-  padding: 1rem 2.5rem;
-  border-radius: 8px;
-  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 24px rgba(232, 115, 74, 0.25);
-}
-
-.cta-btn:hover {
-  background: #d4633c;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(232, 115, 74, 0.35);
-}
-
-.cta-btn:active { transform: translateY(0); }
-
-.cta-btn svg {
-  width: 20px;
-  height: 20px;
-}
-
-/* ========================================
-   FOOTER
-   ======================================== */
-.footer {
-  padding: 2rem 1.5rem;
-  background: #1A1210;
-  text-align: center;
-  color: rgba(250, 245, 239, 0.25);
-  font-size: 0.8rem;
-}
-
-/* ========================================
-   SECTION: FOOD GALLERY (KV)
-   ======================================== */
-.food-gallery {
-  padding: 0 0 0;
-  background: var(--light);
-  overflow: hidden;
-}
-
-.food-gallery-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-}
-
-@media (min-width: 640px) {
-  .food-gallery-grid { grid-template-columns: 1fr 1fr 1fr 1fr; }
-}
-
-.food-gallery-item {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 1;
-}
-
-.food-gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s var(--ease-out);
-}
-
-.food-gallery-item:hover img {
-  transform: scale(1.08);
-}
-
-.food-gallery-item .food-label {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 2rem 1rem 0.75rem;
-  background: linear-gradient(transparent, rgba(42, 31, 26, 0.85));
-  color: var(--light);
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.4s, transform 0.4s;
-}
-
-.food-gallery-item:hover .food-label {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Story section photo */
-.story-photo {
-  border-radius: 12px;
-  overflow: hidden;
-  margin: 2rem 0;
-  box-shadow: 0 8px 32px rgba(42, 31, 26, 0.15);
-}
-
-.story-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ========================================
-   RESPONSIVE
-   ======================================== */
-@media (min-width: 768px) {
-  .story { padding: 6rem 2rem; }
-  .experience { padding: 6rem 2rem; }
-  .info { padding: 6rem 2rem; }
-  .lava-block { padding: 3rem 2.5rem; }
-}
-
-@media (min-width: 1024px) {
-  .story { padding: 8rem 2rem; }
-  .experience { padding: 8rem 2rem; }
-  .info { padding: 8rem 2rem; }
-  .cta { padding: 8rem 2rem; }
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body data-active-lang="en">
 
 <!-- ===================== LANGUAGE SWITCHER ===================== -->
-<nav class="lang-switcher" role="navigation" aria-label="Language">
-  <button class="lang-btn active" data-switch-lang="en" aria-label="English">EN</button>
-  <button class="lang-btn" data-switch-lang="zh" aria-label="Chinese">中文</button>
-  <button class="lang-btn" data-switch-lang="ko" aria-label="Korean">한국어</button>
+<nav class="lang-switcher" role="navigation" aria-label="Language and Navigation">
+  <div class="site-nav">
+    <a href="menu/yakitori/" class="site-nav__link">
+      <span data-lang="en">Menu</span>
+      <span data-lang="zh">菜单</span>
+      <span data-lang="ko">메뉴</span>
+    </a>
+    <a href="articles/" class="site-nav__link">
+      <span data-lang="en">Articles</span>
+      <span data-lang="zh">文章</span>
+      <span data-lang="ko">기사</span>
+    </a>
+  </div>
+  <div>
+    <button class="lang-btn active" data-switch-lang="en" aria-label="English">EN</button>
+    <button class="lang-btn" data-switch-lang="zh" aria-label="Chinese">中文</button>
+    <button class="lang-btn" data-switch-lang="ko" aria-label="Korean">한국어</button>
+  </div>
 </nav>
 
 <!-- ===================== HERO ===================== -->
@@ -867,33 +127,24 @@ body[data-active-lang="ko"] a[data-lang="en"] { display: none; }
   <!-- Steam / ember particles (injected by JS) -->
   <div class="steam-container" aria-hidden="true" id="steam-container"></div>
 
-  <!-- Noren curtain metaphor -->
-  <div class="hero-noren" aria-hidden="true">
-    <div class="hero-noren-bar"></div>
-    <div style="text-align:center;">
-      <div class="hero-noren-panel"></div>
-      <div class="hero-noren-panel"></div>
-    </div>
-  </div>
-
   <p class="hero-shop-name reveal">笑門酒房 だんけ</p>
 
   <h1 class="reveal" style="transition-delay:0.15s">
-    <span data-lang="en">Welcome to Our Little Kitchen</span>
-    <span data-lang="zh">欢迎来到我们的小厨房</span>
-    <span data-lang="ko">우리의 작은 주방에 오신 것을 환영합니다</span>
+    <span data-lang="en">Lava Stone Yakitori</span>
+    <span data-lang="zh">熔岩石烤鸡肉串</span>
+    <span data-lang="ko">용암석 야키토리</span>
   </h1>
 
   <p class="hero-sub reveal" style="transition-delay:0.3s">
-    <span data-lang="en">Lava stone grilled yakitori in a hidden Osaka alley</span>
-    <span data-lang="zh">大阪隐秘小巷中的熔岩石烤鸡肉串</span>
-    <span data-lang="ko">오사카 숨겨진 골목의 용암석 구이 야키토리</span>
+    <span data-lang="en">Yakitori izakaya near Minamimorimachi &amp; Tenjinbashi, Osaka</span>
+    <span data-lang="zh">大阪南森町·天神桥的烤鸡肉串居酒屋</span>
+    <span data-lang="ko">오사카 미나미모리마치·텐진바시의 야키토리 이자카야</span>
   </p>
 
   <p class="hero-tagline reveal" style="transition-delay:0.45s">
-    <span data-lang="en">A neighborhood izakaya where fire, stone, and soul come together</span>
-    <span data-lang="zh">一家将火、石与灵魂融为一体的社区居酒屋</span>
-    <span data-lang="ko">불, 돌, 그리고 정성이 하나 되는 동네 이자카야</span>
+    <span data-lang="en">Where fire, stone, and soul come together</span>
+    <span data-lang="zh">火、石与灵魂交融之处</span>
+    <span data-lang="ko">불, 돌, 그리고 정성이 하나 되는 곳</span>
   </p>
 
   <div class="hero-scroll" aria-hidden="true">
@@ -905,35 +156,35 @@ body[data-active-lang="ko"] a[data-lang="en"] { display: none; }
 <section class="food-gallery" aria-label="Food gallery">
   <div class="food-gallery-grid">
     <div class="food-gallery-item">
-      <img src="images/lava-yakitori.jpg" alt="Lava stone grilled yakitori - signature dish at Danke Izakaya" loading="eager" width="800" height="800">
+      <img src="images/momo-thumb.jpg" alt="Momo (Thigh) - lava stone grilled chicken thigh at Danke Izakaya" loading="eager" width="800" height="800">
       <div class="food-label">
-        <span data-lang="en">Lava Stone Yakitori</span>
-        <span data-lang="zh">熔岩石烤鸡</span>
-        <span data-lang="ko">용암석 야키토리</span>
+        <span data-lang="en">Momo (Thigh)</span>
+        <span data-lang="zh">鸡腿肉</span>
+        <span data-lang="ko">모모(닭다리)</span>
       </div>
     </div>
     <div class="food-gallery-item">
-      <img src="images/chicken-tataki.jpg" alt="Chicken tataki garnished with shiso and edible flowers" loading="eager" width="800" height="800">
+      <img src="images/hatsu-thumb.jpg" alt="Hatsu (Heart) - grilled chicken heart yakitori" loading="eager" width="800" height="800">
       <div class="food-label">
-        <span data-lang="en">Chicken Tataki</span>
-        <span data-lang="zh">鸡肉刺身</span>
-        <span data-lang="ko">치킨 타타키</span>
+        <span data-lang="en">Hatsu (Heart)</span>
+        <span data-lang="zh">鸡心</span>
+        <span data-lang="ko">하츠(심장)</span>
       </div>
     </div>
     <div class="food-gallery-item">
-      <img src="images/lava-pizza.jpg" alt="Lava stone pizza with basil and melted cheese" loading="eager" width="800" height="800">
+      <img src="images/shiitake-thumb.jpg" alt="Shiitake Mushroom grilled on lava stone" loading="eager" width="800" height="800">
       <div class="food-label">
-        <span data-lang="en">Lava Stone Pizza</span>
-        <span data-lang="zh">熔岩石披萨</span>
-        <span data-lang="ko">용암석 피자</span>
+        <span data-lang="en">Shiitake Mushroom</span>
+        <span data-lang="zh">香菇</span>
+        <span data-lang="ko">표고버섯</span>
       </div>
     </div>
     <div class="food-gallery-item">
-      <img src="images/yakitori-skewers.jpg" alt="Assorted yakitori skewers with lemon" loading="eager" width="800" height="800">
+      <img src="images/toridon-thumb.jpg" alt="Chef's Special Bowl - signature chicken rice bowl" loading="eager" width="800" height="800">
       <div class="food-label">
-        <span data-lang="en">Yakitori Skewers</span>
-        <span data-lang="zh">烤鸡肉串拼盘</span>
-        <span data-lang="ko">야키토리 모듬</span>
+        <span data-lang="en">Chef's Special Bowl</span>
+        <span data-lang="zh">特制鸡肉盖饭</span>
+        <span data-lang="ko">특제 닭고기덮밥</span>
       </div>
     </div>
   </div>
@@ -1270,6 +521,113 @@ body[data-active-lang="ko"] a[data-lang="en"] { display: none; }
   </div>
 </section>
 
+<!-- ===================== ARTICLES ===================== -->
+<section class="articles-preview" id="articles" style="background:var(--light); padding:clamp(3rem,6vw,6rem) clamp(1rem,4vw,2rem);">
+  <div style="max-width:900px; margin:0 auto;">
+    <p class="section-label reveal" style="text-align:center; color:var(--brown);">
+      <span data-lang="en">From Our Kitchen</span>
+      <span data-lang="zh">来自我们的厨房</span>
+      <span data-lang="ko">우리 주방에서</span>
+    </p>
+
+    <h2 class="reveal" style="text-align:center; color:var(--dark);">
+      <span data-lang="en">Articles &amp; Guides</span>
+      <span data-lang="zh">文章与指南</span>
+      <span data-lang="ko">기사 및 가이드</span>
+    </h2>
+
+    <div class="articles-grid" style="margin-top:2rem;">
+      <!-- Article 1 -->
+      <a href="articles/lava-stone-grilling/" class="article-card article-card--light">
+        <div class="article-card-thumb">
+          <img src="images/momo-thumb.jpg" alt="Lava stone grilling" loading="lazy" width="800" height="800">
+        </div>
+        <div class="article-card-body">
+          <time class="article-card-date">2026-03-27</time>
+          <h3 class="article-card-title">
+            <span data-lang="en">What is Lava Stone Grilling?</span>
+            <span data-lang="zh">什么是熔岩石烧烤？</span>
+            <span data-lang="ko">용암석 그릴이란?</span>
+          </h3>
+          <p class="article-card-excerpt">
+            <span data-lang="en">The ancient technique behind our signature yakitori</span>
+            <span data-lang="zh">我们招牌烤鸡背后的古老技术</span>
+            <span data-lang="ko">시그니처 야키토리의 고대 기법</span>
+          </p>
+        </div>
+      </a>
+
+      <!-- Article 2 -->
+      <a href="articles/tenjinbashi-after-dark/" class="article-card article-card--light">
+        <div class="article-card-thumb">
+          <img src="images/article-tenjinbashi.jpg" alt="Tenjinbashi nightlife" loading="lazy" width="800" height="800">
+        </div>
+        <div class="article-card-body">
+          <time class="article-card-date">2026-03-27</time>
+          <h3 class="article-card-title">
+            <span data-lang="en">Tenjinbashi After Dark</span>
+            <span data-lang="zh">天神桥之夜</span>
+            <span data-lang="ko">텐진바시의 밤</span>
+          </h3>
+          <p class="article-card-excerpt">
+            <span data-lang="en">Where locals eat &amp; drink in Osaka's longest shopping street</span>
+            <span data-lang="zh">大阪最长商店街的深夜美食指南</span>
+            <span data-lang="ko">오사카 최장 상점가의 로컬 맛집</span>
+          </p>
+        </div>
+      </a>
+
+      <!-- Article 3 -->
+      <a href="articles/solo-dining-osaka/" class="article-card article-card--light">
+        <div class="article-card-thumb">
+          <img src="images/article-solo-dining.jpg" alt="Solo dining" loading="lazy" width="800" height="800">
+        </div>
+        <div class="article-card-body">
+          <time class="article-card-date">2026-03-27</time>
+          <h3 class="article-card-title">
+            <span data-lang="en">Solo Dining in Osaka</span>
+            <span data-lang="zh">大阪一人食指南</span>
+            <span data-lang="ko">오사카 혼밥 가이드</span>
+          </h3>
+          <p class="article-card-excerpt">
+            <span data-lang="en">An introvert's guide to izakaya culture</span>
+            <span data-lang="zh">内向者的居酒屋文化指南</span>
+            <span data-lang="ko">내향인을 위한 이자카야 문화 가이드</span>
+          </p>
+        </div>
+      </a>
+
+      <!-- Article 4 -->
+      <a href="articles/how-to-order-sake/" class="article-card article-card--light">
+        <div class="article-card-thumb">
+          <img src="images/article-sake.jpg" alt="Sake guide" loading="lazy" width="800" height="800">
+        </div>
+        <div class="article-card-body">
+          <time class="article-card-date">2026-03-27</time>
+          <h3 class="article-card-title">
+            <span data-lang="en">How to Order Sake Like a Local</span>
+            <span data-lang="zh">像当地人一样点清酒</span>
+            <span data-lang="ko">현지인처럼 사케 주문하기</span>
+          </h3>
+          <p class="article-card-excerpt">
+            <span data-lang="en">Your guide to Japanese sake and shochu</span>
+            <span data-lang="zh">日本清酒和烧酒入门指南</span>
+            <span data-lang="ko">일본 사케와 소주 입문 가이드</span>
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="articles/" style="color:var(--brown); font-size:0.95rem; text-decoration:underline; text-underline-offset:4px;">
+        <span data-lang="en">View All Articles →</span>
+        <span data-lang="zh">查看所有文章 →</span>
+        <span data-lang="ko">모든 기사 보기 →</span>
+      </a>
+    </p>
+  </div>
+</section>
+
 <!-- Wave divider: light to dark -->
 <div class="wave-divider" aria-hidden="true">
   <svg viewBox="0 0 1440 100" preserveAspectRatio="none" fill="none">
@@ -1297,7 +655,7 @@ body[data-active-lang="ko"] a[data-lang="en"] { display: none; }
       <span data-lang="ko">기다리고 있겠습니다.</span>
     </p>
 
-    <a href="https://www.google.com/maps/place/%E7%AC%91%E9%96%80%E9%85%92%E6%88%BF+%E3%81%A0%E3%82%93%E3%81%91/@34.694229,135.5090476,17z/data=!3m1!4b1!4m6!3m5!1s0x6000e6d915a196f5:0xd0880ca55613b0d1!8m2!3d34.6942246!4d135.5116279!16s%2Fg%2F11b7hds7d6" target="_blank" rel="noopener noreferrer" class="cta-btn reveal" style="transition-delay:0.15s">
+    <a href="https://www.google.com/maps/search/笑門酒房+だんけ+天神橋" target="_blank" rel="noopener noreferrer" class="cta-btn reveal" style="transition-delay:0.15s">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
         <circle cx="12" cy="10" r="3"/>
@@ -1311,8 +669,8 @@ body[data-active-lang="ko"] a[data-lang="en"] { display: none; }
 
 <!-- ===================== SEO: Multi-language text for crawlers ===================== -->
 <aside aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;">
-  <h2>笑門酒房 だんけ — 大阪天神橋の溶岩焼き鶏居酒屋</h2>
-  <p>大阪・天神橋にある鶏料理専門の隠れ家居酒屋。溶岩プレートで焼く焼き鶏が名物。JR大阪天満宮駅・南森町駅から徒歩5分。18席。VISA/Mastercard対応。</p>
+  <h2>笑門酒房 だんけ — 南森町・天神橋の焼き鳥居酒屋｜溶岩焼き</h2>
+  <p>大阪・南森町・天神橋筋商店街にある焼き鳥専門の隠れ家居酒屋。溶岩プレートで焼く焼き鶏が名物。天神橋1丁目、JR大阪天満宮駅・地下鉄南森町駅から徒歩5分。カウンター8席と掘りごたつ3卓の全18席。一人飲みも歓迎。VISA/Mastercard対応。</p>
   <h2>大阪天神桥熔岩石烤鸡肉串居酒屋</h2>
   <p>隐藏在大阪天神桥的鸡肉料理专门居酒屋。招牌熔岩石烤鸡肉串，外酥里嫩。从JR大阪天满宫站步行5分钟。18个座位。可使用Visa/Mastercard。</p>
   <h2>오사카 텐진바시 용암석 구이 야키토리 이자카야</h2>
@@ -1321,6 +679,18 @@ body[data-active-lang="ko"] a[data-lang="en"] { display: none; }
 
 <!-- ===================== FOOTER ===================== -->
 <footer class="footer">
+  <nav style="margin-bottom:0.75rem; display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap; font-size:0.85rem;">
+    <a href="./" style="color:var(--amber); text-decoration:none;">Home</a>
+    <a href="menu/yakitori/" style="color:var(--amber); text-decoration:none;">
+      <span data-lang="en">Yakitori</span><span data-lang="zh">烤鸡串</span><span data-lang="ko">야키토리</span>
+    </a>
+    <a href="menu/sake-shochu/" style="color:var(--amber); text-decoration:none;">
+      <span data-lang="en">Sake &amp; Shochu</span><span data-lang="zh">清酒·烧酒</span><span data-lang="ko">사케·소주</span>
+    </a>
+    <a href="articles/" style="color:var(--amber); text-decoration:none;">
+      <span data-lang="en">Articles</span><span data-lang="zh">文章</span><span data-lang="ko">기사</span>
+    </a>
+  </nav>
   <p>&copy; 笑門酒房 だんけ &mdash; Tenjinbashi, Osaka</p>
 </footer>
 

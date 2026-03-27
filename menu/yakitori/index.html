@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yakitori Menu - Danke Izakaya | Lava Stone Grilled Chicken Skewers, Osaka</title>
+<meta name="description" content="Explore our lava stone grilled yakitori menu: hatsu (heart), momo (thigh), reba (liver), sasami (breast), and shiitake. Each skewer grilled to perfection at Danke Izakaya, Osaka.">
+<meta name="keywords" content="yakitori menu, chicken skewers Osaka, lava stone yakitori, hatsu, momo, reba, sasami, shiitake, izakaya Osaka, 焼き鳥, 야키토리, 烤鸡肉串">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://haute-manmoto.github.io/danke-lp/menu/yakitori/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Yakitori Menu - Danke Izakaya | Lava Stone Grilled Skewers">
+<meta property="og:description" content="Five signature yakitori skewers grilled on natural volcanic stone. Heart, thigh, liver, breast, and shiitake — each with the chef's recommended seasoning.">
+<meta property="og:type" content="restaurant.menu">
+<meta property="og:url" content="https://haute-manmoto.github.io/danke-lp/menu/yakitori/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:site_name" content="笑門酒房 だんけ | Danke Izakaya">
+<meta property="og:image" content="https://haute-manmoto.github.io/danke-lp/images/hero-desktop.jpg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="800">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yakitori Menu - Danke Izakaya | Lava Stone Grilled Skewers">
+<meta name="twitter:description" content="Five signature yakitori skewers grilled on natural volcanic stone at Danke Izakaya, Osaka.">
+<meta name="twitter:image" content="https://haute-manmoto.github.io/danke-lp/images/hero-desktop.jpg">
+
+<!-- Structured Data: Menu -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "name": "Yakitori Menu",
+  "description": "Lava stone grilled yakitori selection at Danke Izakaya",
+  "hasMenuSection": [{
+    "@type": "MenuSection",
+    "name": "Yakitori",
+    "hasMenuItem": [
+      {"@type": "MenuItem", "name": "Hatsu (Heart)", "description": "Chicken heart grilled on lava stone, served with salt and lemon"},
+      {"@type": "MenuItem", "name": "Momo (Thigh)", "description": "Juicy chicken thigh, salt-grilled on lava stone"},
+      {"@type": "MenuItem", "name": "Reba (Liver)", "description": "Creamy chicken liver with tare glaze and green onion"},
+      {"@type": "MenuItem", "name": "Sasami (Breast)", "description": "Lean chicken tenderloin, salt-grilled with fresh negi"},
+      {"@type": "MenuItem", "name": "Shiitake", "description": "Shiitake mushroom with bonito flakes, grilled on lava stone"}
+    ]
+  }]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+
+<style>
+/* ===================== YAKITORI PAGE SPECIFIC ===================== */
+.yakitori-menu-section {
+  background: var(--dark);
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+}
+
+.yakitori-menu-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.menu-item-card .condiment-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(232, 115, 74, 0.12);
+  border: 1px solid rgba(232, 115, 74, 0.25);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  color: var(--lava);
+  font-weight: 500;
+  margin-top: 0.75rem;
+}
+
+.condiment-tag svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* Eating guide */
+.eating-guide {
+  background: var(--light);
+  padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 3vw, 2rem);
+}
+
+.eating-guide-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.eating-guide h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  color: var(--dark);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.guide-item {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.guide-number {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: var(--dark);
+  color: var(--amber);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.guide-content h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+
+.guide-content p {
+  font-size: 0.92rem;
+  color: #5a4a3e;
+  line-height: 1.9;
+}
+
+/* Sake CTA box */
+.sake-cta-box {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 3rem);
+  background: linear-gradient(135deg, #3D2B1E 0%, var(--dark) 50%, #3D2B1E 100%);
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sake-cta-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 70%, rgba(232, 115, 74, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.sake-cta-box h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  color: var(--light);
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.sake-cta-box p {
+  font-size: 0.92rem;
+  color: rgba(250, 245, 239, 0.6);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.sake-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  background: var(--lava);
+  color: var(--light);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.sake-cta-btn:hover {
+  background: #d4633c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(232, 115, 74, 0.3);
+}
+
+.sake-cta-section {
+  background: var(--light);
+  padding: 0 clamp(1rem, 3vw, 2rem) clamp(3rem, 6vw, 5rem);
+}
+</style>
+</head>
+
+<body data-active-lang="en">
+
+<!-- ===================== LANGUAGE SWITCHER + NAV ===================== -->
+<nav class="lang-switcher" role="navigation" aria-label="Language and navigation">
+  <div class="site-nav">
+    <a href="../../">
+      <span data-lang="en">Home</span>
+      <span data-lang="zh">首页</span>
+      <span data-lang="ko">홈</span>
+    </a>
+    <a href="../../#story">
+      <span data-lang="en">Story</span>
+      <span data-lang="zh">故事</span>
+      <span data-lang="ko">스토리</span>
+    </a>
+    <a class="active">
+      <span data-lang="en">Menu</span>
+      <span data-lang="zh">菜单</span>
+      <span data-lang="ko">메뉴</span>
+    </a>
+    <a href="../../#info">
+      <span data-lang="en">Info</span>
+      <span data-lang="zh">信息</span>
+      <span data-lang="ko">정보</span>
+    </a>
+  </div>
+  <button class="lang-btn active" data-switch-lang="en" aria-label="English">EN</button>
+  <button class="lang-btn" data-switch-lang="zh" aria-label="Chinese">中文</button>
+  <button class="lang-btn" data-switch-lang="ko" aria-label="Korean">한국어</button>
+</nav>
+
+<!-- ===================== BREADCRUMB ===================== -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li>
+      <a href="../../">
+        <span data-lang="en">Home</span>
+        <span data-lang="zh">首页</span>
+        <span data-lang="ko">홈</span>
+      </a>
+    </li>
+    <li>
+      <a href="../../#menu">
+        <span data-lang="en">Menu</span>
+        <span data-lang="zh">菜单</span>
+        <span data-lang="ko">메뉴</span>
+      </a>
+    </li>
+    <li>
+      <span class="current">
+        <span data-lang="en">Yakitori</span>
+        <span data-lang="zh">烤鸡肉串</span>
+        <span data-lang="ko">야키토리</span>
+      </span>
+    </li>
+  </ol>
+</nav>
+
+<!-- ===================== PAGE HEADER ===================== -->
+<header class="page-header">
+  <p class="section-label reveal" style="color:rgba(212,165,116,0.6);">笑門酒房 だんけ</p>
+  <h1 class="reveal" style="transition-delay:0.1s">
+    <span data-lang="en">Our Yakitori</span>
+    <span data-lang="zh">焼き鳥メニュー</span>
+    <span data-lang="ko">야키토리 메뉴</span>
+  </h1>
+  <p class="page-header-sub reveal" style="transition-delay:0.2s">
+    <span data-lang="en">Five signature skewers, grilled on volcanic lava stone</span>
+    <span data-lang="zh">五种招牌烤串，天然火山岩烤制</span>
+    <span data-lang="ko">천연 화산 용암석으로 구운 다섯 가지 시그니처 꼬치</span>
+  </p>
+</header>
+
+<!-- ===================== YAKITORI MENU ITEMS ===================== -->
+<section class="yakitori-menu-section" id="yakitori-menu">
+  <div class="yakitori-menu-inner">
+
+    <!-- 1. ハツ (Hatsu) - Heart -->
+    <article class="menu-item-card reveal">
+      <div class="menu-item-photo">
+        <img src="../../images/hatsu.jpg" alt="Hatsu - Chicken heart yakitori grilled on lava stone with salt and lemon" loading="lazy" width="800" height="600">
+      </div>
+      <div class="menu-item-body">
+        <p class="menu-item-name-jp">ハツ（はつ）</p>
+        <h3 class="menu-item-name">
+          <span data-lang="en">Hatsu — Heart</span>
+          <span data-lang="zh">鸡心</span>
+          <span data-lang="ko">하츠 (심장)</span>
+        </h3>
+        <div class="menu-item-desc">
+          <p data-lang="en">Lean, slightly chewy, with a rich mineral flavor that lingers on the palate. The heart is the hallmark of a good yakitori-ya — its quality tells you everything about a kitchen's standards. Our lava stone sears the exterior while keeping the interior pink and tender. A true test of the grill master's skill, and a perfect way to begin your yakitori journey.</p>
+          <p data-lang="zh">精瘦微弹，矿物质风味浓郁，在舌尖久久不散。鸡心是检验一家优秀焼き鳥店的标志——它的品质能告诉你这间厨房的一切水准。我们的溶岩石将表面烤得焦香，内里保持粉嫩多汁。这是对烤师技艺的真正考验，也是开启焼き鳥之旅的完美之选。</p>
+          <p data-lang="ko">담백하고 살짝 쫄깃하며, 입안에 감도는 풍부한 미네랄 풍미가 특징입니다. 하츠는 좋은 야키토리야의 상징 — 그 품질이 주방의 모든 수준을 말해줍니다. 용암석이 겉은 바삭하게 속은 핑크빛으로 촉촉하게 구워냅니다. 구이 장인의 실력을 가늠하는 진정한 시금석이자, 야키토리 여정의 완벽한 시작입니다.</p>
+        </div>
+        <div class="condiment-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          <span data-lang="en">Recommended: Salt with a lemon squeeze</span>
+          <span data-lang="zh">推荐：盐配柠檬汁</span>
+          <span data-lang="ko">추천: 소금 + 레몬 한 방울</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. もも (Momo) - Thigh -->
+    <article class="menu-item-card reveal" style="transition-delay:0.1s">
+      <div class="menu-item-photo">
+        <img src="../../images/momo.jpg" alt="Momo - Juicy chicken thigh yakitori with crispy skin, salt-grilled on lava stone" loading="lazy" width="800" height="600">
+      </div>
+      <div class="menu-item-body">
+        <p class="menu-item-name-jp">もも（もも）</p>
+        <h3 class="menu-item-name">
+          <span data-lang="en">Momo — Thigh</span>
+          <span data-lang="zh">鸡腿肉</span>
+          <span data-lang="ko">모모 (닭다리)</span>
+        </h3>
+        <div class="menu-item-desc">
+          <p data-lang="en">Juicy, tender, and the most popular cut on our menu. The thigh carries the perfect balance of meat and fat, delivering deep chicken flavor in every bite. Our lava stone makes the skin incredibly crispy — a satisfying crunch that gives way to succulent, smoky flesh beneath. Simple salt is all it needs, letting the natural richness of the chicken shine through without distraction.</p>
+          <p data-lang="zh">多汁、嫩滑，是我们菜单上最受欢迎的部位。鸡腿肉拥有肉与脂肪的完美平衡，每一口都充满浓郁的鸡肉风味。溶岩石将鸡皮烤得令人难以置信地酥脆——咬下去的那声脆响过后，是柔嫩多汁、烟香四溢的鸡肉。只需简单的盐调味，让鸡肉本身的鲜美毫无保留地绽放。</p>
+          <p data-lang="ko">육즙이 풍부하고 부드러우며, 메뉴에서 가장 인기 있는 부위입니다. 닭다리는 살코기와 지방의 완벽한 균형을 갖추고 있어 한 입마다 깊은 닭고기 풍미를 선사합니다. 용암석이 껍질을 믿을 수 없을 만큼 바삭하게 구워 — 그 만족스러운 식감 아래로 촉촉하고 훈연향 가득한 살코기가 이어집니다. 소금만으로 충분합니다. 닭고기 본연의 풍부한 맛이 그대로 빛나도록.</p>
+        </div>
+        <div class="condiment-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          <span data-lang="en">Recommended: Salt (lets the natural flavor shine)</span>
+          <span data-lang="zh">推荐：盐（让天然风味闪耀）</span>
+          <span data-lang="ko">추천: 소금 (닭고기 본연의 맛을 살립니다)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3. レバー (Reba) - Liver -->
+    <article class="menu-item-card reveal" style="transition-delay:0.15s">
+      <div class="menu-item-photo">
+        <img src="../../images/reba.jpg" alt="Reba - Chicken liver yakitori with sweet tare glaze and green onion" loading="lazy" width="800" height="600">
+      </div>
+      <div class="menu-item-body">
+        <p class="menu-item-name-jp">レバー（ればー）</p>
+        <h3 class="menu-item-name">
+          <span data-lang="en">Reba — Liver</span>
+          <span data-lang="zh">鸡肝</span>
+          <span data-lang="ko">레바 (닭간)</span>
+        </h3>
+        <div class="menu-item-desc">
+          <p data-lang="en">Creamy, rich, and iron-forward — liver is the bold choice that rewards adventurous eaters. Our chef grills it to a blush-pink center, then glazes it with our house-made tare: a sweet soy reduction built over years of layering. Topped with plenty of freshly cut negi (green onion), the sharpness of the onion cuts through the richness, creating a perfectly balanced bite every time.</p>
+          <p data-lang="zh">浓郁奶香、口感醇厚、铁味鲜明——鸡肝是对勇于尝试的食客的最佳馈赏。主厨将其烤至中心微带粉红，再淋上自制酱汁：一种经年累月层层叠加的甜酱油浓缩。撒上大量现切的葱花，葱的辛辣完美地化解了浓郁，每一口都是绝妙的平衡。</p>
+          <p data-lang="ko">크리미하고 풍부하며 철분 맛이 도드라지는 — 레바는 모험심 있는 미식가에게 보상을 주는 대담한 선택입니다. 셰프가 속심을 은은한 핑크빛으로 구운 뒤, 수년간 쌓아온 달콤한 간장 소스(타레)를 발라 마무리합니다. 듬뿍 올린 신선한 파(네기)의 알싸한 맛이 풍부한 맛을 깔끔하게 잡아주어, 매번 완벽한 균형의 한 입을 선사합니다.</p>
+        </div>
+        <div class="condiment-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          <span data-lang="en">Recommended: Tare (sweet soy glaze) with plenty of negi</span>
+          <span data-lang="zh">推荐：酱汁（甜酱油釉）配大量葱花</span>
+          <span data-lang="ko">추천: 타레 (달콤한 간장 소스) + 파 듬뿍</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4. ささみ (Sasami) - Breast Tenderloin -->
+    <article class="menu-item-card reveal" style="transition-delay:0.2s">
+      <div class="menu-item-photo">
+        <img src="../../images/sasami.jpg" alt="Sasami - Chicken breast tenderloin yakitori, salt-grilled with fresh negi" loading="lazy" width="800" height="600">
+      </div>
+      <div class="menu-item-body">
+        <p class="menu-item-name-jp">ささみ（ささみ）</p>
+        <h3 class="menu-item-name">
+          <span data-lang="en">Sasami — Breast Tenderloin</span>
+          <span data-lang="zh">鸡柳</span>
+          <span data-lang="ko">사사미 (안심)</span>
+        </h3>
+        <div class="menu-item-desc">
+          <p data-lang="en">The leanest cut, delicate and light — a clean canvas that showcases pure technique. Most kitchens struggle to keep sasami moist, but our lava stone changes the game. The volcanic surface radiates intense, even heat that sears the exterior in seconds while the interior stays impossibly juicy. Topped with fresh negi for a gentle bite of sharpness. If you value subtlety, this is your skewer.</p>
+          <p data-lang="zh">最精瘦的部位，精致而清淡——一块展现纯粹技艺的白色画布。大多数厨房难以保持鸡柳的水润，但我们的溶岩石改变了一切。火山石表面散发出强烈均匀的热量，瞬间将外表烤得焦香，而内里仍保持令人难以置信的多汁。撒上新鲜葱花，增添一丝温和的辛辣。如果你欣赏细腻之美，这就是属于你的一串。</p>
+          <p data-lang="ko">가장 담백한 부위로, 섬세하고 가벼운 — 순수한 기술력을 보여주는 깨끗한 캔버스입니다. 대부분의 주방에서는 사사미의 촉촉함을 유지하기 어렵지만, 우리의 용암석이 게임을 바꿉니다. 화산 표면에서 강렬하고 고른 열이 방사되어 겉면은 순식간에 시어링하면서도 속은 놀라울 정도로 촉촉합니다. 신선한 파를 올려 은은한 알싸함을 더했습니다. 섬세한 맛을 중시한다면, 이것이 당신의 꼬치입니다.</p>
+        </div>
+        <div class="condiment-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          <span data-lang="en">Recommended: Salt, topped with fresh negi</span>
+          <span data-lang="zh">推荐：盐，配新鲜葱花</span>
+          <span data-lang="ko">추천: 소금 + 신선한 파 토핑</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5. しいたけ (Shiitake) - Shiitake Mushroom -->
+    <article class="menu-item-card reveal" style="transition-delay:0.25s">
+      <div class="menu-item-photo">
+        <img src="../../images/shiitake.jpg" alt="Shiitake mushroom yakitori with bonito flakes, grilled on lava stone" loading="lazy" width="800" height="600">
+      </div>
+      <div class="menu-item-body">
+        <p class="menu-item-name-jp">しいたけ（しいたけ）</p>
+        <h3 class="menu-item-name">
+          <span data-lang="en">Shiitake — Shiitake Mushroom</span>
+          <span data-lang="zh">香菇</span>
+          <span data-lang="ko">표고버섯</span>
+        </h3>
+        <div class="menu-item-desc">
+          <p data-lang="en">Not chicken, but an essential part of the yakitori experience. Thick-capped shiitake mushrooms absorb the lava stone's smoky heat, concentrating their natural umami into something deeply savory. The volcanic surface intensifies the glutamates, creating an almost meaty depth of flavor. Finished with a crown of katsuobushi (bonito flakes) that dance and curl in the rising heat — a visual spectacle and a flavor bomb in one.</p>
+          <p data-lang="zh">虽然不是鸡肉，却是焼き鳥体验中不可或缺的一环。厚实的香菇吸收溶岩石的烟熏热量，将天然鲜味浓缩成一种深沉的美味。火山石表面强化了谷氨酸，创造出近乎肉感的风味层次。最后撒上一簇柴鱼花——它们在升腾的热气中翩翩起舞、卷曲摇曳——既是视觉盛宴，也是味觉炸弹。</p>
+          <p data-lang="ko">닭고기는 아니지만, 야키토리 경험에서 빠질 수 없는 존재입니다. 두꺼운 갓의 표고버섯이 용암석의 훈연 열기를 흡수하여 천연 감칠맛을 깊고 진한 맛으로 응축합니다. 화산 표면이 글루타메이트를 강화하여 거의 고기에 가까운 깊은 풍미를 만들어냅니다. 가쓰오부시(가다랑어포)를 올리면 올라오는 열기에 살랑살랑 춤추며 — 시각적 즐거움과 맛의 폭발을 동시에 선사합니다.</p>
+        </div>
+        <div class="condiment-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          <span data-lang="en">Recommended: Salt, topped with katsuobushi (bonito flakes)</span>
+          <span data-lang="zh">推荐：盐，配柴鱼花</span>
+          <span data-lang="ko">추천: 소금 + 가쓰오부시(가다랑어포) 토핑</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== EATING GUIDE ===================== -->
+<section class="eating-guide" id="eating-guide">
+  <div class="eating-guide-inner">
+    <p class="section-label reveal" style="text-align:center;">
+      <span data-lang="en">Visitor's Guide</span>
+      <span data-lang="zh">游客指南</span>
+      <span data-lang="ko">방문객 가이드</span>
+    </p>
+
+    <h2 class="reveal">
+      <span data-lang="en">How to Enjoy Yakitori</span>
+      <span data-lang="zh">焼き鳥の楽しみ方</span>
+      <span data-lang="ko">야키토리 즐기는 법</span>
+    </h2>
+
+    <!-- Guide 1: Salt vs Tare -->
+    <div class="guide-item reveal">
+      <div class="guide-number">1</div>
+      <div class="guide-content">
+        <h3>
+          <span data-lang="en">Salt vs Tare</span>
+          <span data-lang="zh">盐味 vs 酱汁</span>
+          <span data-lang="ko">소금 vs 타레</span>
+        </h3>
+        <p data-lang="en">Salt (shio) is the lighter option — it steps back and lets the meat's true flavor take center stage. Tare is a sweet-savory soy glaze, richer and more complex, built from layers of reduction over time. Neither is better; they serve different purposes. At Danke, the chef recommends each piece with its ideal match, so you can trust the suggestion or explore on your own.</p>
+        <p data-lang="zh">盐味（塩）是更清淡的选择——它退居幕后，让肉的真正风味成为主角。酱汁（タレ）是一种甜咸酱油釉，味道更浓郁更复杂，由长期反复熬制而成。两者无优劣之分，各有所长。在「だんけ」，主厨会为每一串推荐最佳搭配，您可以信任推荐，也可以自行探索。</p>
+        <p data-lang="ko">소금(시오)은 더 가벼운 선택으로 — 한 발 물러서서 고기 본연의 맛이 주인공이 되게 합니다. 타레는 달콤하고 짭짤한 간장 소스로, 더 풍부하고 복합적이며 오랜 세월 겹겹이 졸여 만든 것입니다. 어느 쪽이 더 낫다고 할 수 없으며, 각자의 역할이 있습니다. 단케에서는 셰프가 각 꼬치에 가장 잘 어울리는 것을 추천하니, 추천을 믿거나 직접 탐험해 보세요.</p>
+      </div>
+    </div>
+
+    <!-- Guide 2: The Lemon -->
+    <div class="guide-item reveal">
+      <div class="guide-number">2</div>
+      <div class="guide-content">
+        <h3>
+          <span data-lang="en">The Lemon</span>
+          <span data-lang="zh">柠檬</span>
+          <span data-lang="ko">레몬</span>
+        </h3>
+        <p data-lang="en">A gentle squeeze of lemon brightens fatty cuts and adds a refreshing lift between bites. But restraint is key — don't drown the skewer. A few drops is enough to complement the char and salt without masking the flavor the chef carefully built. Think of it as an accent, not a sauce.</p>
+        <p data-lang="zh">轻轻一挤柠檬能提亮油脂丰富的部位，在每口之间增添清新感。但关键是适度——不要淹没烤串。几滴就足以衬托炭火和盐的风味，而不会掩盖主厨精心打造的味道。把它当作点缀，而非酱汁。</p>
+        <p data-lang="ko">레몬을 살짝 짜면 기름진 부위가 산뜻해지고 한 입 한 입 사이에 상쾌한 느낌을 더해줍니다. 하지만 절제가 핵심 — 꼬치를 푹 적시지 마세요. 몇 방울이면 셰프가 정성껏 만든 맛을 가리지 않으면서 숯불 향과 소금을 보완하기에 충분합니다. 소스가 아닌, 악센트로 생각하세요.</p>
+      </div>
+    </div>
+
+    <!-- Guide 3: Eating from the Skewer -->
+    <div class="guide-item reveal">
+      <div class="guide-number">3</div>
+      <div class="guide-content">
+        <h3>
+          <span data-lang="en">Eating from the Skewer</span>
+          <span data-lang="zh">直接从签上吃</span>
+          <span data-lang="ko">꼬치에서 바로 먹기</span>
+        </h3>
+        <p data-lang="en">In Japan, it's perfectly fine to eat directly from the stick at a casual izakaya like ours. No need for chopsticks or a fork — just pick up the skewer, bite, and enjoy. Some regulars slide pieces off with chopsticks to share, but for solo eating, the stick is your utensil. It's casual, it's fun, and it's exactly how locals do it.</p>
+        <p data-lang="zh">在日本，在像我们这样的休闲居酒屋里，直接从签上吃是完全没问题的。不需要筷子或叉子——拿起烤串，咬一口，尽情享受。有些常客会用筷子把肉滑下来分享，但独自享用时，竹签就是你的餐具。很随意，很开心，这正是当地人的吃法。</p>
+        <p data-lang="ko">일본에서는 우리 같은 캐주얼 이자카야에서 꼬치째 바로 먹는 것이 전혀 이상하지 않습니다. 젓가락이나 포크가 필요 없어요 — 그냥 꼬치를 들고, 한 입 베어 물고, 즐기면 됩니다. 단골들 중에는 젓가락으로 고기를 빼서 나눠 먹는 분도 계시지만, 혼자 먹을 때는 꼬치가 곧 수저입니다. 캐주얼하고, 재미있고, 현지인들이 먹는 방식 그대로입니다.</p>
+      </div>
+    </div>
+
+    <!-- Guide 4: Order of Eating -->
+    <div class="guide-item reveal">
+      <div class="guide-number">4</div>
+      <div class="guide-content">
+        <h3>
+          <span data-lang="en">Order of Eating</span>
+          <span data-lang="zh">品尝顺序</span>
+          <span data-lang="ko">먹는 순서</span>
+        </h3>
+        <p data-lang="en">Start light (sasami, hatsu) then move to rich (momo, reba) and finish with umami (shiitake). This is the chef's recommended progression — it builds your palate gradually, letting each skewer land with maximum impact. Of course, there are no rules. But if it's your first time, trust the chef's order. Your taste buds will thank you.</p>
+        <p data-lang="zh">从清淡的开始（鸡柳、鸡心），再到浓郁的（鸡腿、鸡肝），最后以鲜味收尾（香菇）。这是主厨推荐的品尝顺序——循序渐进地唤醒你的味蕾，让每一串都发挥出最大的冲击力。当然，没有硬性规定。但如果是你第一次来，请相信主厨的安排。你的味蕾会感谢你的。</p>
+        <p data-lang="ko">담백한 것부터 시작하여 (사사미, 하츠) 풍부한 맛으로 (모모, 레바) 이동하고, 감칠맛으로 마무리합니다 (표고버섯). 이것이 셰프의 추천 순서입니다 — 미각을 점진적으로 높여가며 각 꼬치가 최대한의 임팩트를 전달하게 합니다. 물론 규칙은 없습니다. 하지만 처음이라면, 셰프의 순서를 믿어보세요. 미각이 감사할 것입니다.</p>
+      </div>
+    </div>
+
+    <!-- Guide 5: Pair with Sake -->
+    <div class="guide-item reveal">
+      <div class="guide-number">5</div>
+      <div class="guide-content">
+        <h3>
+          <span data-lang="en">Pair with Sake</span>
+          <span data-lang="zh">搭配清酒</span>
+          <span data-lang="ko">사케와 페어링</span>
+        </h3>
+        <p data-lang="en">Our lava stone yakitori pairs beautifully with local sake and shochu. The smoky char of the grill finds its perfect companion in a crisp junmai or a smooth barley shochu on the rocks. The chef can suggest a pairing for your order — just ask. For our full drink selection, see our <a href="../sake-shochu/" style="color:var(--lava); text-decoration:underline;">sake and shochu page</a>.</p>
+        <p data-lang="zh">我们的溶岩石焼き鳥与本地清酒和烧酒完美搭配。炭火的烟熏感在清冽的纯米酒或加冰的麦烧酒中找到了最佳伙伴。主厨可以为您推荐配对——只需开口询问。完整的酒单请查看我们的<a href="../sake-shochu/" style="color:var(--lava); text-decoration:underline;">清酒与烧酒页面</a>。</p>
+        <p data-lang="ko">우리의 용암석 야키토리는 지역 사케, 소주와 아름답게 어울립니다. 숯불 구이의 훈연향은 깔끔한 준마이 사케나 온더록 보리 소주에서 완벽한 파트너를 만납니다. 셰프가 주문에 맞는 페어링을 추천해 드릴 수 있으니 편하게 물어보세요. 전체 음료 메뉴는 <a href="../sake-shochu/" style="color:var(--lava); text-decoration:underline;">사케 & 소주 페이지</a>를 참고하세요.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== SAKE PAIRING CTA ===================== -->
+<section class="sake-cta-section">
+  <div class="sake-cta-box reveal">
+    <h3>
+      <span data-lang="en">Complete Your Meal</span>
+      <span data-lang="zh">完善您的用餐</span>
+      <span data-lang="ko">식사를 완성하세요</span>
+    </h3>
+    <p>
+      <span data-lang="en">Our curated sake and shochu selection pairs perfectly with every skewer on this menu.</span>
+      <span data-lang="zh">我们精选的清酒和烧酒与菜单上的每一串完美搭配。</span>
+      <span data-lang="ko">엄선된 사케와 소주 셀렉션이 이 메뉴의 모든 꼬치와 완벽하게 어울립니다.</span>
+    </p>
+    <a href="../sake-shochu/" class="sake-cta-btn">
+      <span data-lang="en">Explore Sake &amp; Shochu</span>
+      <span data-lang="zh">探索清酒与烧酒</span>
+      <span data-lang="ko">사케 &amp; 소주 보기</span>
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ===================== STORE INFO COMPACT ===================== -->
+<section class="store-info-compact">
+  <div class="store-info-compact-inner">
+
+    <div class="store-info-compact-item reveal">
+      <svg class="compact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </svg>
+      <div>
+        <h4>
+          <span data-lang="en">ADDRESS</span>
+          <span data-lang="zh">地址</span>
+          <span data-lang="ko">주소</span>
+        </h4>
+        <p>
+          <span data-lang="en">Nishida Bldg 1F, 1-12-3 Tenjinbashi, Kita-ku, Osaka</span>
+          <span data-lang="zh">大阪府大阪市北区天神桥1-12-3 西田大楼 1F</span>
+          <span data-lang="ko">오사카부 오사카시 기타구 텐진바시 1-12-3 니시다빌딩 1F</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="store-info-compact-item reveal">
+      <svg class="compact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="2" y="6" width="20" height="12" rx="2"/>
+        <path d="M2,10 L22,10"/>
+      </svg>
+      <div>
+        <h4>
+          <span data-lang="en">ACCESS</span>
+          <span data-lang="zh">交通</span>
+          <span data-lang="ko">교통</span>
+        </h4>
+        <p>
+          <span data-lang="en">5 min walk from JR Osaka-Tenmangu Stn / Minami-Morimachi Stn</span>
+          <span data-lang="zh">从JR大阪天满宫站或地铁南森町站步行5分钟</span>
+          <span data-lang="ko">JR 오사카텐만구역 / 미나미모리마치역 도보 5분</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="store-info-compact-item reveal">
+      <svg class="compact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <polyline points="12 6 12 12 16 14"/>
+      </svg>
+      <div>
+        <h4>
+          <span data-lang="en">HOURS</span>
+          <span data-lang="zh">营业时间</span>
+          <span data-lang="ko">영업시간</span>
+        </h4>
+        <p>
+          <span data-lang="en">Mon–Sat 17:30–23:00 / Sun: Closed</span>
+          <span data-lang="zh">周一至周六 17:30–23:00 / 周日休息</span>
+          <span data-lang="ko">월–토 17:30–23:00 / 일요일 휴무</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="store-info-compact-item reveal">
+      <svg class="compact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72"/>
+      </svg>
+      <div>
+        <h4>
+          <span data-lang="en">PHONE</span>
+          <span data-lang="zh">电话</span>
+          <span data-lang="ko">전화</span>
+        </h4>
+        <p><a href="tel:+81-6-6882-6675">06-6882-6675</a></p>
+      </div>
+    </div>
+
+    <div class="store-info-compact-item reveal">
+      <svg class="compact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="12" y1="1" x2="12" y2="23"/>
+        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+      </svg>
+      <div>
+        <h4>
+          <span data-lang="en">BUDGET</span>
+          <span data-lang="zh">预算</span>
+          <span data-lang="ko">예산</span>
+        </h4>
+        <p>
+          <span data-lang="en">Around 4,000–5,000 per person</span>
+          <span data-lang="zh">约4,000–5,000日元/人</span>
+          <span data-lang="ko">1인당 약 4,000–5,000엔</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="store-info-compact-item reveal" style="align-items:center;">
+      <a href="https://www.google.com/maps/search/笑門酒房+だんけ+天神橋" target="_blank" rel="noopener noreferrer" class="compact-cta">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        <span data-lang="en">Open in Google Maps</span>
+        <span data-lang="zh">在Google Maps中打开</span>
+        <span data-lang="ko">Google Maps에서 열기</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <nav style="margin-bottom:1rem; display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap;">
+    <a href="../../" style="color:rgba(250,245,239,0.5); font-size:0.8rem; transition:color 0.3s;">
+      <span data-lang="en">Home</span>
+      <span data-lang="zh">首页</span>
+      <span data-lang="ko">홈</span>
+    </a>
+    <a href="../sake-shochu/" style="color:rgba(250,245,239,0.5); font-size:0.8rem; transition:color 0.3s;">
+      <span data-lang="en">Sake &amp; Shochu</span>
+      <span data-lang="zh">清酒与烧酒</span>
+      <span data-lang="ko">사케 &amp; 소주</span>
+    </a>
+    <a href="../../#info" style="color:rgba(250,245,239,0.5); font-size:0.8rem; transition:color 0.3s;">
+      <span data-lang="en">Info</span>
+      <span data-lang="zh">信息</span>
+      <span data-lang="ko">정보</span>
+    </a>
+  </nav>
+  <p>&copy; 笑門酒房 だんけ &mdash; Tenjinbashi, Osaka</p>
+</footer>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+(function() {
+  'use strict';
+
+  /* ---- Language Switcher ---- */
+  var langBtns = document.querySelectorAll('[data-switch-lang]');
+  langBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var lang = this.getAttribute('data-switch-lang');
+      document.body.setAttribute('data-active-lang', lang);
+      langBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+    });
+  });
+
+  /* ---- IntersectionObserver for reveal animations ---- */
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReduced) {
+    var reveals = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    reveals.forEach(function(el) { observer.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      el.classList.add('visible');
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
