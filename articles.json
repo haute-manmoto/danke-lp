@@ -1,0 +1,121 @@
+[
+  {
+    "slug": "yakitori-parts-guide",
+    "date": "2026-03-30",
+    "thumb": "article-yakitori-parts.jpg",
+    "tag": { "en": "Food Guide", "zh": "美食指南", "ko": "음식 가이드" },
+    "title": {
+      "en": "Yakitori Parts Guide: What to Order at a Japanese Chicken Skewer Bar",
+      "zh": "烤鸡串部位指南：如何点菜",
+      "ko": "야키토리 부위 가이드: 어떤 메뉴를 주문할까"
+    },
+    "excerpt": {
+      "en": "Every cut explained — momo, hatsu, reba, sasami and more.",
+      "zh": "各部位详解——鸡腿、鸡心、鸡肝、鸡里脊等。",
+      "ko": "모든 부위 해설 — 모모, 하츠, 레바, 사사미 등."
+    },
+    "keywords": ["yakitori", "food", "chicken", "menu", "grilling", "skewer"]
+  },
+  {
+    "slug": "izakaya-etiquette-guide",
+    "date": "2026-03-30",
+    "thumb": "article-izakaya-etiquette.jpg",
+    "tag": { "en": "Culture", "zh": "文化", "ko": "문화" },
+    "title": {
+      "en": "Izakaya Etiquette: 10 Things Every First-Timer Should Know",
+      "zh": "居酒屋礼仪：初次光顾必知的10件事",
+      "ko": "이자카야 에티켓: 처음 방문자가 알아야 할 10가지"
+    },
+    "excerpt": {
+      "en": "Otoshi, ordering customs, counter seats, useful phrases, and how to pay.",
+      "zh": "お通し、点单习惯、吧台座位、常用语及结账方式。",
+      "ko": "오토시, 주문 방식, 카운터석, 유용한 표현, 계산 방법."
+    },
+    "keywords": ["izakaya", "culture", "etiquette", "tips", "beginner", "dining"]
+  },
+  {
+    "slug": "chicken-tataki-guide",
+    "date": "2026-03-30",
+    "thumb": "article-chicken-tataki.jpg",
+    "tag": { "en": "Food Guide", "zh": "美食指南", "ko": "음식 가이드" },
+    "title": {
+      "en": "What is Chicken Tataki? Japan's Lightly Seared Chicken Sashimi",
+      "zh": "鸡肉塔塔基是什么？日本轻炙鸡肉刺身",
+      "ko": "닭 타타키란? 일본의 살짝 구운 닭고기 사시미"
+    },
+    "excerpt": {
+      "en": "Japan's lightly seared chicken — what it is, why it's safe, and how to eat it.",
+      "zh": "日本轻炙鸡肉刺身——是什么、为何安全、如何享用。",
+      "ko": "일본의 살짝 구운 닭고기 사시미 — 정체, 안전성, 먹는 법."
+    },
+    "keywords": ["chicken", "tataki", "sashimi", "food", "menu", "raw"]
+  },
+  {
+    "slug": "lava-stone-grilling",
+    "date": "2026-03-27",
+    "thumb": "momo-thumb.jpg",
+    "tag": { "en": "Food Science", "zh": "美食科学", "ko": "음식 과학" },
+    "title": {
+      "en": "What is Lava Stone Grilling?",
+      "zh": "熔岩石烧烤是什么？",
+      "ko": "용암석 그릴이란?"
+    },
+    "excerpt": {
+      "en": "How volcanic rock and far-infrared heat create the juiciest yakitori.",
+      "zh": "火山岩和远红外线如何创造最多汁的烤鸡串。",
+      "ko": "화산암과 원적외선이 가장 촉촉한 야키토리를 만드는 방법."
+    },
+    "keywords": ["yakitori", "grilling", "lava", "food", "science", "chicken", "technique"]
+  },
+  {
+    "slug": "tenjinbashi-after-dark",
+    "date": "2026-03-27",
+    "thumb": "article-tenjinbashi.jpg",
+    "tag": { "en": "Area Guide", "zh": "地区指南", "ko": "지역 가이드" },
+    "title": {
+      "en": "Tenjinbashi After Dark: Where Locals Eat & Drink",
+      "zh": "天神桥之夜：当地人的觅食地",
+      "ko": "텐진바시의 밤: 현지인들의 맛집"
+    },
+    "excerpt": {
+      "en": "Where locals eat and drink along Japan's longest shopping street.",
+      "zh": "在日本最长的商店街上，当地人在哪里吃喝。",
+      "ko": "일본에서 가장 긴 상점가에서 현지인들이 먹고 마시는 곳."
+    },
+    "keywords": ["osaka", "tenjinbashi", "area", "nightlife", "izakaya", "dining", "local"]
+  },
+  {
+    "slug": "solo-dining-osaka",
+    "date": "2026-03-27",
+    "thumb": "article-solo-dining-new.jpg",
+    "tag": { "en": "Culture", "zh": "文化", "ko": "문화" },
+    "title": {
+      "en": "Solo Dining in Osaka: An Introvert's Guide to Izakaya",
+      "zh": "大阪一人食：内向者的居酒屋指南",
+      "ko": "오사카 혼밥: 내향인을 위한 이자카야 가이드"
+    },
+    "excerpt": {
+      "en": "An introvert's guide to eating alone at an izakaya.",
+      "zh": "内向者的居酒屋一人食指南。",
+      "ko": "내향인을 위한 이자카야 혼밥 가이드."
+    },
+    "keywords": ["izakaya", "solo", "culture", "dining", "osaka", "tips", "beginner"]
+  },
+  {
+    "slug": "how-to-order-sake",
+    "date": "2026-03-27",
+    "thumb": "article-sake-new.jpg",
+    "tag": { "en": "Drink Guide", "zh": "饮品指南", "ko": "음료 가이드" },
+    "title": {
+      "en": "How to Order Sake Like a Local",
+      "zh": "像当地人一样点清酒",
+      "ko": "현지인처럼 사케 주문하기"
+    },
+    "excerpt": {
+      "en": "Temperature, flavor profiles, and etiquette for ordering sake.",
+      "zh": "清酒的温度、风味和点酒礼仪。",
+      "ko": "사케의 온도, 풍미 프로필, 주문 에티켓."
+    },
+    "keywords": ["sake", "drinks", "shochu", "menu", "culture", "etiquette", "beginner"]
+  }
+]

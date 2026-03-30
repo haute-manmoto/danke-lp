@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://haute-manmoto.github.io/danke-lp/</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -20,31 +20,49 @@
   </url>
   <url>
     <loc>https://haute-manmoto.github.io/danke-lp/articles/lava-stone-grilling/</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://haute-manmoto.github.io/danke-lp/articles/tenjinbashi-after-dark/</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://haute-manmoto.github.io/danke-lp/articles/solo-dining-osaka/</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://haute-manmoto.github.io/danke-lp/articles/how-to-order-sake/</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://haute-manmoto.github.io/danke-lp/articles/yakitori-parts-guide/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://haute-manmoto.github.io/danke-lp/articles/izakaya-etiquette-guide/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://haute-manmoto.github.io/danke-lp/articles/chicken-tataki-guide/</loc>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://haute-manmoto.github.io/danke-lp/articles/</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
