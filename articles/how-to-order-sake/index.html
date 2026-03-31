@@ -323,16 +323,6 @@
   </div>
 </article>
 
-<!-- ===================== FOOD PHOTO CAROUSEL ===================== -->
-<div class="food-strip">
-  <img src="../../images/momo.jpg" alt="Momo yakitori" loading="lazy">
-  <img src="../../images/hatsu.jpg" alt="Hatsu yakitori" loading="lazy">
-  <img src="../../images/reba.jpg" alt="Reba yakitori" loading="lazy">
-  <img src="../../images/sasami.jpg" alt="Sasami yakitori" loading="lazy">
-  <img src="../../images/shiitake.jpg" alt="Shiitake yakitori" loading="lazy">
-  <img src="../../images/toridon.jpg" alt="Toridon" loading="lazy">
-</div>
-
 <!-- ===================== RELATED ARTICLES ===================== -->
 <section style="background:var(--dark); padding:clamp(3rem,6vw,5rem) clamp(1rem,4vw,2rem);">
   <div style="max-width:900px; margin:0 auto;">
@@ -416,7 +406,6 @@
     </div>
   </div>
 </section>
-
 <!-- ===================== STORE INFO COMPACT ===================== -->
 <section class="store-info-compact">
   <div class="store-info-compact-inner">
@@ -521,7 +510,6 @@
 (function() {
   'use strict';
 
-  /* ---- Language Switcher ---- */
   var langBtns = document.querySelectorAll('[data-switch-lang]');
   langBtns.forEach(function(btn) {
     btn.addEventListener('click', function() {
@@ -532,7 +520,6 @@
     });
   });
 
-  /* ---- IntersectionObserver for reveal animations ---- */
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (!prefersReduced) {
@@ -559,7 +546,6 @@
     });
   }
 
-  /* ---- Smooth scroll for anchor links ---- */
   document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     a.addEventListener('click', function(e) {
       var target = document.querySelector(this.getAttribute('href'));
