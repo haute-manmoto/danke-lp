@@ -1,5 +1,22 @@
 [
   {
+    "slug": "osaka-tenmangu-guide",
+    "date": "2026-03-31",
+    "thumb": "article-tenmangu.jpg",
+    "tag": { "en": "Area Guide", "zh": "地区指南", "ko": "지역 가이드" },
+    "title": {
+      "en": "Osaka Tenmangu Shrine: A Complete Visitor's Guide",
+      "zh": "大阪天满宫：完整参观指南",
+      "ko": "오사카 덴만구: 완벽한 방문 가이드"
+    },
+    "excerpt": {
+      "en": "Founded in 949 AD, Osaka Tenmangu honors the god of learning — and it's a 5-minute walk from Danke.",
+      "zh": "建于公元949年的大阪天满宫供奉学问之神，距离だんけ仅5分钟步程。",
+      "ko": "949년에 창건된 오사카 덴만구는 학문의 신을 모시며, だんけ에서 도보 5분 거리입니다."
+    },
+    "keywords": ["osaka", "shrine", "tenmangu", "tenjinbashi", "sightseeing", "area", "culture", "history"]
+  },
+  {
     "slug": "yakitori-parts-guide",
     "date": "2026-03-30",
     "thumb": "article-yakitori-parts.jpg",
