@@ -1,5 +1,22 @@
 [
   {
+    "slug": "tenjin-matsuri-guide",
+    "date": "2026-04-27",
+    "thumb": "article-tenjin-matsuri.jpg",
+    "tag": { "en": "Area Guide", "zh": "地区指南", "ko": "지역 가이드" },
+    "title": {
+      "en": "Tenjin Matsuri 2026: A Complete Guide to Osaka's Greatest Summer Festival",
+      "zh": "天神祭 2026：大阪夏季最盛大祭典完全指南",
+      "ko": "텐진 마쓰리 2026: 오사카 최대 여름 축제 완벽 가이드"
+    },
+    "excerpt": {
+      "en": "Held July 24–25 at Osaka Tenmangu — boats, fireworks, and 1,000 years of history, just 5 minutes from Danke.",
+      "zh": "7月24日至25日在大阪天满宫举行——船渡御、烟花、千年传承，距离だんけ仅5分钟。",
+      "ko": "7월 24~25일 오사카 덴만구에서 열리는 — 선상 행렬, 불꽃놀이, 1,000년 역사. だんけ에서 도보 5분."
+    },
+    "keywords": ["tenjin", "matsuri", "festival", "osaka", "tenmangu", "summer", "fireworks", "july", "tenjinbashi", "sightseeing", "area", "culture", "history"]
+  },
+  {
     "slug": "osaka-tenmangu-guide",
     "date": "2026-03-31",
     "thumb": "article-tenmangu.jpg",
